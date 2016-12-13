@@ -1,8 +1,7 @@
-<%= form_for(@post) do |f| %>
-    <% @post.comparisons.times do |index| %>
-        <%= render "comparison_object", :f => f %> 
-    <% end %>
-    <div class="actions">
-    <%= f.submit %>
-    </div>
-    <% end %>
+<%= form_tag "/posts" do %>
+	<%= hidden_field_tag "post_id", @post.id %>
+  <% @post.comparisons.times do %>
+    <%= render 'comparison_object' %>     
+  <% end %>
+  <%= submit_tag "Submit" %>
+<% end %>

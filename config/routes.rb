@@ -5,7 +5,7 @@ Rails.application.routes.draw do
      
   get '/dashboard' => 'posts#dashboard', as: "dashboard"
 
-  get '/posts/objects' => 'posts#objects'
+  post '/posts/objects' => 'posts#objects'
   root 'posts#dashboard'
 
   resources :posts

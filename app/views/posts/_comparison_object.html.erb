@@ -1,13 +1,4 @@
-
-<div class="field">
-    <%= f.label :Image_of_object %><br>
-    <%= f.file_field :image %>
-</div>
- <div class="field">
-    <%= f.label :Emoticon %><br>
-    <%= f.text_field :type %>
-</div>
-<div class="field">
-    <%= f.label :Name %><br>
-    <%= f.text_field :name %>
-</div>
+Name: <%= text_field_tag "objects[][name]" %>
+Emoticon: <%= text_field_tag "objects[][emoticon]" %>
+Image: <%= file_field_tag "objects[][image]" %>
+<br/>

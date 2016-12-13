@@ -1,4 +1,4 @@
-class BackgroundImageUploader < CarrierWave::Uploader::Base
+class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::MiniMagick
@@ -28,7 +28,7 @@ class BackgroundImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  version :thumb do
+  version :large do
      process resize_to_limit: [720, 1280]
   end
 

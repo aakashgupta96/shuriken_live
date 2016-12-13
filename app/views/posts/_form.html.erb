@@ -1,4 +1,4 @@
-<%= form_for(@post,:url => url_for(:controller=>'posts',:action=>'objects'),:method=>"get") do |f| %>
+<%= form_for(@post,:url => "/posts/objects",:method=>"post") do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :comparisons %><br>
-    <%= f.text_field :comparisons %>
+    <%= f.text_field :comparisons, require: "true" %>
   </div>
   <div class="field">
     <%= f.label :background_image %><br>
-    <%= f.file_field :background_image %>
+    <%= f.file_field :background %>
   </div>
   <div class="field">
     <%= f.label :duration %><br>
@@ -39,3 +39,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+<%#"%>

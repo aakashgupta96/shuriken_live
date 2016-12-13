@@ -8,9 +8,7 @@ class PostsController < ApplicationController
   def objects
     @post = Post.new(post_params)
     @post.save
-    @object = Array.new(@post.comparisons)
-    
-
+    byebug
   end
 
   # GET /posts
@@ -36,8 +34,16 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    byebug
-    @post = Post.new(post_params)
+    @post = Post.find(params["post_id"])
+    @post.comparisons.times do |i|
+      # temp = Hash.new
+      # temp = object_params(0)
+      @object = CompareObject.new(object_params(i))
+      @object.save
+      byebug
+      @post.compare_objects << @object
+    end
+
 
     respond_to do |format|
       if @post.save
@@ -82,6 +88,10 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:key, :title, :duration, :start_time, :background_image, :comparisons)
+      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
+    end
+
+    def object_params i
+      params.require(:objects)[i].permit(:name,:emoticon,:image)
     end
 end

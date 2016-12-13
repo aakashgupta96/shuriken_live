@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213094052) do
+ActiveRecord::Schema.define(version: 20161213150107) do
 
   create_table "compare_objects", force: :cascade do |t|
     t.string   "name"
-    t.integer  "type"
+    t.integer  "emoticon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "post_id"
+    t.string   "image"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -26,9 +27,9 @@ ActiveRecord::Schema.define(version: 20161213094052) do
     t.string   "title"
     t.time     "duration"
     t.time     "start_time"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "background_image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "background"
     t.integer  "comparisons"
   end
 
