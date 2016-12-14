@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'redis', '~>3.2'
 gem 'rmagick'
+gem 'sidekiq'
+gem 'whenever', :require => false
+
+gem 'rufus-scheduler'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
