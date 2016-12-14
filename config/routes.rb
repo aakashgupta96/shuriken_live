@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
      
   get '/dashboard' => 'posts#dashboard', as: "dashboard"
-
+  get '/editor/createFrame' => 'editor#createFrame'
   post '/posts/objects' => 'posts#objects'
   root 'posts#dashboard'
 
