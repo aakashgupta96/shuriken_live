@@ -9,8 +9,7 @@ Rails.application.configure do
   config.ignore_processing_errors = false
   config.ignore_download_errors = false 
   end
-
-  config.cache_classes = false
+config.cache_classes = false
 
   # Do not eager load code on boot.
   config.eager_load = false

@@ -29,9 +29,7 @@ Rails.application.routes.draw do
   #     collection do
   #       get 'sold'
   #     end
-  #   en
-
-  # Example resource route with sub-resources:
+# Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller
@@ -58,6 +56,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
   get "*path" => redirect('/')
   
+
 end
