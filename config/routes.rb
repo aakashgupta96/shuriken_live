@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+     
+  get '/dashboard' => 'posts#dashboard', as: "dashboard"
 
+  post '/posts/objects' => 'posts#objects'
+  root 'posts#dashboard'
+
+  resources :posts
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -24,9 +29,7 @@ Rails.application.routes.draw do
   #     collection do
   #       get 'sold'
   #     end
-  #   end
-
-  # Example resource route with sub-resources:
+# Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller
@@ -53,4 +56,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get "*path" => redirect('/')
+  
+
 end

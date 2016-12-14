@@ -1,0 +1,12 @@
+<%= form_for(@compare_object,url: "/posts", method: "post") do |f| %>
+	
+	<%= hidden_field_tag :post_id,@post.id %>
+	<%@post.comparisons.times do |i|%>
+    	Name: <%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
+		Emoticon: <%= f.text_field :emoticon, name: "compare_object[#{i}][emoticon]", required: true%>
+		Image: <%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
+		<br/>
+  	<% end %>
+  	<%= submit_tag "Submit" %>
+<% end %>
+

@@ -13,3 +13,6 @@ Sidekiq.configure_server do |config|
 end
 
 Rails.application.initialize!
+
+require 'carrierwave/orm/activerecord'
+
