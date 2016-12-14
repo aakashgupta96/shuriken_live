@@ -8,7 +8,10 @@ class PostsController < ApplicationController
   def objects
     @post = Post.new(post_params)
     @post.save
-    byebug
+    @compare_object = CompareObject.new#Array.new
+    # @post.comparisons.times do|i|
+    #   @compare_object[i] = CompareObject.new
+    # end
   end
 
   # GET /posts
@@ -34,16 +37,12 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.find(params["post_id"])
+    @post = Post.find(params[:post_id])
     @post.comparisons.times do |i|
-      # temp = Hash.new
-      # temp = object_params(0)
-      @object = CompareObject.new(object_params(i))
-      @object.save
-      byebug
+      @object = CompareObject.new(compare_object_params i)
+      @object.post_id = @post.id
       @post.compare_objects << @object
     end
-
 
     respond_to do |format|
       if @post.save
@@ -91,7 +90,7 @@ class PostsController < ApplicationController
       params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
     end
 
-    def object_params i
-      params.require(:objects)[i].permit(:name,:emoticon,:image)
+    def compare_object_params i
+      params.require(:compare_object).require("#{i}").permit(:name,:emoticon,:image)
     end
 end

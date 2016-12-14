@@ -13,30 +13,29 @@
 
   <div class="field">
     <%= f.label :key %><br>
-    <%= f.text_field :key %>
+    <%= f.text_field :key, required: true %>
   </div>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true %>
   </div>
   <div class="field">
     <%= f.label :comparisons %><br>
-    <%= f.text_field :comparisons, require: "true" %>
+    <%= f.text_field :comparisons, required: true %>
   </div>
   <div class="field">
     <%= f.label :background_image %><br>
-    <%= f.file_field :background %>
+    <%= f.file_field :background, required: true %>
   </div>
   <div class="field">
     <%= f.label :duration %><br>
-    <%= f.time_select :duration %>
+    <%= f.time_select :duration, required: true %>
   </div>
   <div class="field">
     <%= f.label :start_time_from_now %><br>
-    <%= f.time_select :start_time %>
+    <%= f.time_select :start_time, required: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-<%#"%>
