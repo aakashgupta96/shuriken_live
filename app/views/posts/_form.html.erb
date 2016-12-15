@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :key %><br>
+    <%= f.label :Stream_key %><br>
     <%= f.text_field :key, required: true %>
   </div>
   <div class="field">
@@ -28,12 +28,8 @@
     <%= f.file_field :background, required: true %>
   </div>
   <div class="field">
-    <%= f.label :Publish_time %><br>
-    <%= f.datetime_select :start_time,start_year: Time.now.year, ampm: true, required: true %>
-  </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%=  f.time_select :duration, start_hour: 0 , end_hour: 3%>
+    <%= f.label :Duration %><br>
+    <%=  f.time_select :duration, start_hour: 0 , end_hour: 3, default:{hour: 0, minute: 30} %>
   </div>
   <div class="actions">
     <%= f.submit %>
