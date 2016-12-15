@@ -58,7 +58,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         createFrame
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to post_postid_path(@post.id), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -100,8 +100,8 @@ class PostsController < ApplicationController
     txt = Draw.new
     result.annotate(txt, 0,0,0,25, post.title){
     txt.gravity = Magick::NorthGravity
-    txt.pointsize = 30
-    txt.stroke = "#000000"
+    txt.pointsize = 40
+    txt.stroke = "black"
     txt.fill = "#ffffff"
     txt.font_weight = Magick::BoldWeight
     }
@@ -109,38 +109,97 @@ class PostsController < ApplicationController
     #Adding compare objects to image formed
     if post.compare_objects.count == 2
       
+      #Adding first object
       object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.jpg")
       object = object.resize_to_fill(200,200)
       result = background.composite(object,100,100, Magick::OverCompositeOp)
       
-      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.jpg")
-      object = object.resize_to_fill(50,50)
-      result = result.composite(object,110,320, Magick::OverCompositeOp)
-      
-      object = Magick::Image.new(120, 50) { self.background_color = "white" }
-      result = result.composite(object,170,320, Magick::OverCompositeOp)
-      result = result.composite(object,470,320, Magick::OverCompositeOp)
-      
-      
+      #Adding second object
       object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.jpg")
       object = object.resize_to_fill(200,200)
       result = result.composite(object,400,100, Magick::OverCompositeOp)
       
+      #Adding reaction image of object 1
+      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.jpg")
+      object = object.resize_to_fill(50,50)
+      result = result.composite(object,110,320, Magick::OverCompositeOp)
+      
+      #Adding reaction image of object 2
       object = ImageList.new("public/#{post.compare_objects[1].emoticon}.jpg")
       object = object.resize_to_fill(50,50)
       result = result.composite(object,410,320, Magick::OverCompositeOp)
       
+      #Adding blank space for reaction count of option 1
+      object = Magick::Image.new(120, 50) { self.background_color = "white" }
+      result = result.composite(object,170,320, Magick::OverCompositeOp)
+      
+      #Adding blank space for reaction count of option 2
+      result = result.composite(object,470,320, Magick::OverCompositeOp)
+      
+      
+      #Adding name for objects
       txt = Draw.new
-      result.annotate(txt, 0,0,50,375,post.compare_objects[0].name){
-      txt.pointsize = 20
-      txt.stroke = "#000000"
-      txt.fill = "#ffffff"
-      #txt.font_weight = Magick::BoldWeight
+      result.annotate(txt, 0,0,100,400,post.compare_objects[0].name){
+      txt.pointsize = 30
+      txt.stroke = "orange"
+      txt.fill = "black"
+      txt.font_weight = Magick::BoldWeight
       }
    
+      result.annotate(txt, 0,0,400,400,post.compare_objects[1].name)
 
     elsif post.compare_objects.count == 3
+      
+      #Adding first object
+      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.jpg")
+      object = object.resize_to_fill(180,200)
+      result = background.composite(object,45,100, Magick::OverCompositeOp)
+      
+      #Adding second object
+      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.jpg")
+      object = object.resize_to_fill(180,200)
+      result = result.composite(object,270,100, Magick::OverCompositeOp)
+      
+      #Adding third object
+      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_3.jpg")
+      object = object.resize_to_fill(180,200)
+      result = result.composite(object,495,100, Magick::OverCompositeOp)
+      
+      #Adding reaction image of object 1
+      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.jpg")
+      object = object.resize_to_fill(40,40)
+      result = result.composite(object,50,310, Magick::OverCompositeOp)
+      
+      #Adding reaction image of object 2
+      object = ImageList.new("public/#{post.compare_objects[1].emoticon}.jpg")
+      object = object.resize_to_fill(40,40)
+      result = result.composite(object,275,310, Magick::OverCompositeOp)
+      
+      #Adding reaction image of object 3
+      object = ImageList.new("public/#{post.compare_objects[2].emoticon}.jpg")
+      object = object.resize_to_fill(40,40)
+      result = result.composite(object,500,310, Magick::OverCompositeOp)
+      
+      #Adding blank space for reaction count
+      object = Magick::Image.new(120, 40) { self.background_color = "white" }
+      result = result.composite(object,100,310, Magick::OverCompositeOp)
+      
+      result = result.composite(object,325,310, Magick::OverCompositeOp)
+      
+      result = result.composite(object,555,310, Magick::OverCompositeOp)
+      
+      #Adding name for objects
+      txt = Draw.new
+      result.annotate(txt,0,0,45,380,post.compare_objects[0].name){
+      txt.pointsize = 30
+      txt.stroke = "orange"
+      txt.fill = "black"
+      txt.font_weight = Magick::BoldWeight
+      }
+   
+      result.annotate(txt, 0,0,270,380,post.compare_objects[1].name)
 
+      result.annotate(txt, 0,0,500,380,post.compare_objects[2].name)
     elsif post.compare_objects.count == 4
 
     elsif post.compare_objects.count == 5
@@ -149,10 +208,17 @@ class PostsController < ApplicationController
     
     #For saving image
     result.write("public/uploads/post/#{post.id}/frame.jpg")
+    
+    # ((post.duration.to_i - Time.new(2000).to_i - 19800)/120).to_i.times do
 
+    # result = %x[ffmpeg -loop 1 -framerate 30 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 120 -pix_fmt yuv420p -r 30 -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
+    # end
+    
+    # post.duration.to_i - Time.new(2000).to_i - 19800
+    #result = %x[ffmpeg -loop 1 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 400 -pix_fmt yuv420p -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
+   
     #send_data result.to_blob, :stream => "false", :filename => "test.jpg", :type => "image/jpeg", :disposition => "inline"
   end
-
 
 
   private
@@ -163,7 +229,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
+      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons, :page_id)
     end
 
     def compare_object_params i

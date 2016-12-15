@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20161215072549) do
+ActiveRecord::Schema.define(version: 20161215143637) do
 
   create_table "compare_objects", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20161215072549) do
     t.string   "background"
     t.integer  "comparisons"
     t.string   "fb_id"
+    t.string   "page_id"
   end
 
 end

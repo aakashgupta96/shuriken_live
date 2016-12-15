@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
-     
+  mount Resque::Server, :at => "/resque"
+
   get '/dashboard' => 'posts#dashboard', as: "dashboard"
-  get '/editor/createFrame' => 'editor#createFrame'
-  post '/posts/objects' => 'posts#objects'
+  get '/editor/createFrame'
+  post '/posts/objects'
   root 'posts#dashboard'
   get '/posts/:id/postid'=> 'posts#postid', as: "post_postid"
   post '/posts/save' => 'posts#save'

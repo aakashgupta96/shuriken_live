@@ -4,6 +4,13 @@ require 'koala'
   include Sidekiq::Worker
   
   def perform
+
+    @graph = Koala::Facebook::API.new("241493676272963|I4nCO8TjSUEdG_g5myL7oGxSpGA")
+
+    @posts = Post.all
+    @posts.each do |post|
+      
+    end
     # now = Time.now + (5*60*60) + (30*60)
     # @set = Set.new
     # Post.all.each do|post|
