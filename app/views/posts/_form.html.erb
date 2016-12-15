@@ -28,12 +28,12 @@
     <%= f.file_field :background, required: true %>
   </div>
   <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.time_select :duration, required: true %>
+    <%= f.label :Publish_time %><br>
+    <%= f.datetime_select :start_time,start_year: Time.now.year, ampm: true, required: true %>
   </div>
   <div class="field">
-    <%= f.label :start_time_from_now %><br>
-    <%= f.time_select :start_time, required: true %>
+    <%= f.label :duration %><br>
+    <%=  f.time_select :duration, start_hour: 0 , end_hour: 3%>
   </div>
   <div class="actions">
     <%= f.submit %>
