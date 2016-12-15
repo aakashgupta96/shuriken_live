@@ -3,7 +3,7 @@ gem 'redis', '~>3.2'
 gem 'rmagick'
 gem 'sidekiq'
 gem 'whenever', :require => false
-
+gem "koala", "~> 2.2"
 gem 'rufus-scheduler'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'

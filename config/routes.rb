@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/editor/createFrame' => 'editor#createFrame'
   post '/posts/objects' => 'posts#objects'
   root 'posts#dashboard'
-
+  get '/posts/:id/postid'=> 'posts#postid', as: "post_postid"
+  post '/posts/save' => 'posts#save'
   resources :posts
   
   # Example of regular route:

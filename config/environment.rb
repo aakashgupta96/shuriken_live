@@ -2,6 +2,7 @@
 require File.expand_path('../application', __FILE__)
 require 'rmagick'
 require 'sidekiq'
+require 'koala'
 # Initialize the Rails application.
 
 Sidekiq.configure_client do |config|

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161214155234) do
+ActiveRecord::Schema.define(version: 20161215105119) do
 
   create_table "compare_objects", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20161214155234) do
     t.datetime "updated_at",  null: false
     t.string   "background"
     t.integer  "comparisons"
+    t.string   "fb_id"
   end
 
 end

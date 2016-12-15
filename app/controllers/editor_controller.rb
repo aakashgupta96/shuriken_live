@@ -63,7 +63,7 @@ class EditorController < ApplicationController
     #For saving image
     result.write("public/uploads/post/#{post.id}/frame.jpg")
     
-    #result = %x[ffmpeg -loop 1 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 60 -pix_fmt yuv420p -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/1809657149274066?ds=1&s_l=1&a=ATgU1QhVJ7z-nQpl"]
+    result = %x[ffmpeg -loop 1 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 120 -pix_fmt yuv420p -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
     
     send_data result.to_blob, :stream => "false", :filename => "test.jpg", :type => "image/jpeg", :disposition => "inline"
   end
