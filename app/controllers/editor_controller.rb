@@ -3,6 +3,29 @@ class EditorController < ApplicationController
 	require "RMagick"
 	include Magick
 
+  def testFrame
+    post = Post.last
+    
+    txt = Draw.new
+    txt.pointsize = 30
+    txt.stroke = "orange"
+    txt.fill = "black"
+    txt.font_weight = Magick::BoldWeight
+   
+    obj1 =  8#retrieve post.compare_objects[0].emoticon
+    obj2 =  3#retrieve post.compare_objects[1].emoticon
+    obj3 =  4#retrieve post.compare_objects[2].emoticon
+    obj4 =  4#retrieve post.compare_objects[3].emoticon
+    frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+    frame.annotate(txt,0,0,160,215,obj1.to_s)
+    frame.annotate(txt,0,0,480,215,obj2.to_s)
+    frame.annotate(txt,0,0,160,425,obj3.to_s)
+    frame.annotate(txt,0,0,480,425,obj4.to_s)
+    
+    frame.write("public/uploads/post/#{post.id}/frame2.jpg")
+    send_data frame.to_blob, :stream => "false", :filename => "test.jpg", :type => "image/jpeg", :disposition => "inline"
+  end
+
 	def createFrame 
     post = Post.last
     background = ImageList.new("public/uploads/post/#{post.id}/background/large_1.jpg")
@@ -163,8 +186,9 @@ class EditorController < ApplicationController
     result.write("public/uploads/post/#{post.id}/frame.jpg")
     
     # post.duration.to_i - Time.new(2000).to_i - 19800
-    #result = %x[ffmpeg -loop 1 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 400 -pix_fmt yuv420p -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
-   
+    
+    result = %x[ffmpeg -loop 1 -re -i "public/uploads/post/#{post.id}/frame2.jpg" -pix_fmt yuv420p -profile:v baseline -s 1280x720 -bufsize 6000k -vb 400k -maxrate 1500k -deinterlace -vcodec libx264 -preset veryfast -g 30 -r 30 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/1810735672499547?ds=1&s_l=1&a=ATh9TTkOpBrcwQdU"]
+    
     send_data result.to_blob, :stream => "false", :filename => "test.jpg", :type => "image/jpeg", :disposition => "inline"
   end
 

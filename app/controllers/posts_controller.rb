@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :postid, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :video_id, :destroy]
 
   require "RMagick"
   require 'koala'
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    #byebug
+ 
   end
 
   # GET /posts/new
@@ -36,13 +36,14 @@ class PostsController < ApplicationController
   def edit
   end
 
-  def postid
-    #byebug
+  def video_id
+    Resque.enqueue(StartStream,@post.id)
   end
 
   def save
-      @post.fb_id = params[:fb_id]
-      @post.save 
+      @post = Post.last
+      @post.video_id = params[:video_id]
+      @post.save
   end
 
   # POST /posts
@@ -58,7 +59,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         createFrame
-        format.html { redirect_to post_postid_path(@post.id), notice: 'Post was successfully created.' }
+        format.html { redirect_to post_video_id_path(@post.id), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -72,6 +73,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+        createFrame
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
@@ -206,14 +208,38 @@ class PostsController < ApplicationController
     elsif post.compare_objects.count == 6
     end
     
+
     #For saving image
     result.write("public/uploads/post/#{post.id}/frame.jpg")
     
-    # ((post.duration.to_i - Time.new(2000).to_i - 19800)/120).to_i.times do
 
-    # result = %x[ffmpeg -loop 1 -framerate 30 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 120 -pix_fmt yuv420p -r 30 -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
-    # end
-    
+    txt = Draw.new
+    txt.pointsize = 30
+    txt.stroke = "orange"
+    txt.fill = "black"
+    txt.font_weight = Magick::BoldWeight
+   
+    if post.comparisons == 2
+      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+      frame.annotate(txt,0,0,200,355,"0")
+      frame.annotate(txt,0,0,500,355,"0")
+    elsif post.comparisons == 3
+      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+      frame.annotate(txt,0,0,130,340,"0")
+      frame.annotate(txt,0,0,350,340,"0")
+      frame.annotate(txt,0,0,580,340,"0")
+    elsif post.comparisons == 4
+      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+      frame.annotate(txt,0,0,160,215,"0")
+      frame.annotate(txt,0,0,480,215,"0")
+      frame.annotate(txt,0,0,160,425,"0")
+      frame.annotate(txt,0,0,480,425,"0")
+    elsif post.comparisons == 5
+    elsif post.comparisons == 6
+    end
+
+    frame.write("public/uploads/post/#{post.id}/frame2.jpg")
+
     # post.duration.to_i - Time.new(2000).to_i - 19800
     #result = %x[ffmpeg -loop 1 -i "public/uploads/post/#{post.id}/frame.jpg" -c:v libx264 -t 400 -pix_fmt yuv420p -strict -2 -f flv "rtmp://rtmp-api.facebook.com:80/rtmp/#{post.key}"]
    
@@ -229,7 +255,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons, :page_id)
+      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
     end
 
     def compare_object_params i

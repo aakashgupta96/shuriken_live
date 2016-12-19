@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   get '/dashboard' => 'posts#dashboard', as: "dashboard"
   get '/editor/createFrame'
+  get '/editor/testFrame'
   post '/posts/objects'
   root 'posts#dashboard'
-  get '/posts/:id/postid'=> 'posts#postid', as: "post_postid"
+  get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
   post '/posts/save' => 'posts#save'
   resources :posts
   
