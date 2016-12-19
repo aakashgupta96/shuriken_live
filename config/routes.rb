@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get '/editor/createFrame'
   get '/editor/testFrame'
   post '/posts/objects'
+  get '/posts/:id/objects/edit' => 'posts#edit_objects', as: "edit_objects"
+  #get '/posts/:id/edit' => 'posts#edit_title', as: "edit_title"
+  get '/posts/:id/preview' => 'posts#preview', as: "frame_preview"
   root 'posts#dashboard'
   get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
   post '/posts/save' => 'posts#save'

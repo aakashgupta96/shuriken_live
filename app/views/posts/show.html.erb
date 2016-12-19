@@ -20,6 +20,5 @@
   <%= @post.start_time %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Next', post_postid_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post.id) %> |
+<%= link_to 'Preview Frame', frame_preview_path(@post) %>

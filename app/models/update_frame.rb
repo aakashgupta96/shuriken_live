@@ -20,8 +20,8 @@ class UpdateFrame
       obj1 = retrieve post.compare_objects[0].emoticon
       obj2 = retrieve post.compare_objects[1].emoticon
       frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
-      frame.annotate(txt,0,0,200,355,obj1.to_s)
-      frame.annotate(txt,0,0,500,355,obj2.to_s)
+      frame.annotate(txt,0,0,200,335,obj1.to_s)
+      frame.annotate(txt,0,0,500,335,obj2.to_s)
     elsif post.comparisons == 3
       obj1 =  retrieve post.compare_objects[0].emoticon
       obj2 =  retrieve post.compare_objects[1].emoticon

@@ -1,0 +1,7 @@
+<h2> Video Frame </h2>
+<%= image_tag "#{@post.id}_frame.jpg" %>
+</br>
+
+<%= link_to "Edit Post" , edit_post_path(@post.id) %></br>
+<%= link_to "Edit Compare Objects" , edit_objects_path(@post.id) %></br>
+<%= link_to "Next" , post_video_id_path(@post.id)%></br>

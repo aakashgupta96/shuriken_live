@@ -1,0 +1,22 @@
+<%= form_for(@compare_object,url: "/posts", method: "post") do |f| %>
+	
+	<%= hidden_field_tag :id,@post.id %>
+	<%@post.comparisons.times do |i|%>
+		<h3>For object <%=i+1%> : </h3>
+    	Name: <%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
+    	<br/>
+    	<%= f.label "Reaction" %>:
+		Like<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false%>
+		Love<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false%>
+		Haha<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false%>
+		Wow<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false%>
+		Sad<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false%>
+		Angry<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<br/>	
+		Image: <%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
+		<br/>
+		<br/>
+  	<% end %>
+  	<%= submit_tag "Submit" %>
+<% end %>
+
