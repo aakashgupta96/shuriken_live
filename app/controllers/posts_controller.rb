@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show,:create,:preview,:edit_objects, :edit_title, :edit, :update, :video_id, :destroy]
+  before_action :set_post, only: [:show,:publish,:create,:preview,:edit_objects, :edit_title, :edit, :update, :video_id, :destroy]
 
   include Frame
 
@@ -42,10 +42,12 @@ class PostsController < ApplicationController
     Resque.enqueue(StartStream,@post.id)
   end
 
-  def save
-      @post = Post.last
-      @post.video_id = params[:video_id]
-      @post.save
+  def publish
+      @post.video_id = params[:post][:video_id]
+      @post.save!
+      (((@post.duration - 30.years).to_i)/2).times do
+        Resque.enqueue(UpdateFrame,@post.id)
+      end
   end
 
   # POST /posts

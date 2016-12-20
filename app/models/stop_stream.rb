@@ -20,7 +20,7 @@ class StopStream
 				elapsed_time = StopStream.convert_to_sec(elapsed_time)
 				post_id = StopStream.retrieve_post_id(worker)
 				p = Post.find(post_id)
-				duration = (p.duration-30.years).to_i
+				duration = (p.duration-30.years).to_i + 100
 				puts "Duration is ",duration," and elapsed_time is ",elapsed_time
 				if(elapsed_time >= duration)
 					%x[kill #{x}]	
@@ -28,7 +28,7 @@ class StopStream
 			end
 		end
 
-		sleep(2.seconds)
+		sleep(1)
 		Resque.enqueue(StopStream)
 	end
 
