@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def publish
-      @post.video_id = params[:post][:video_id]
+      @post.video_id = params[:post][:video_id].split("/").last
       @post.save!
       (((@post.duration - 30.years).to_i)/2).times do
         Resque.enqueue(UpdateFrame,@post.id)

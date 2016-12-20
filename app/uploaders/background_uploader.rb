@@ -1,8 +1,8 @@
 class BackgroundUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::MiniMagick
-    include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
+  #include CarrierWave::RMagick
  
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -29,7 +29,7 @@ class BackgroundUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
   version :large do
-     process resize_to_limit: [720, 1280]
+     process :efficient_conversion => [720, 1280]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -52,7 +52,22 @@ class BackgroundUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-     "1.jpg" if original_filename
+     "1.png" if original_filename
    end
+
+
+  private
+
+  def efficient_conversion(width, height)
+    manipulate! do |img|
+      img.format("png") do |c|
+        c.fuzz        "3%"
+        c.trim
+        c.resize      "#{width}x#{height}>"
+        c.resize      "#{width}x#{height}<"
+      end
+      img
+    end
+  end
 
 end

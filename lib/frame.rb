@@ -3,7 +3,7 @@ module Frame
   
 	def createFrame 
 	    post = Post.last
-	    background = ImageList.new("public/uploads/post/#{post.id}/background/large_1.jpg")
+	    background = ImageList.new("public/uploads/post/#{post.id}/background/large_1.png")
 	    result = background
 	    
 	    # Adding title to background
@@ -20,22 +20,22 @@ module Frame
 	    if post.compare_objects.count == 2
 	      
 	      #Adding first object
-	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.jpg")
+	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.png")
 	      object = object.resize_to_fill(200,200)
 	      result = background.composite(object,100,80, Magick::OverCompositeOp)
 	      
 	      #Adding second object
-	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.jpg")
+	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.png")
 	      object = object.resize_to_fill(200,200)
 	      result = result.composite(object,400,80, Magick::OverCompositeOp)
 	      
 	      #Adding reaction image of object 1
-	      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.jpg")
+	      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.png")
 	      object = object.resize_to_fill(50,50)
 	      result = result.composite(object,110,300, Magick::OverCompositeOp)
 	      
 	      #Adding reaction image of object 2
-	      object = ImageList.new("public/#{post.compare_objects[1].emoticon}.jpg")
+	      object = ImageList.new("public/#{post.compare_objects[1].emoticon}.png")
 	      object = object.resize_to_fill(50,50)
 	      result = result.composite(object,410,300, Magick::OverCompositeOp)
 	      
@@ -61,32 +61,32 @@ module Frame
 	    elsif post.compare_objects.count == 3
 	      
 	      #Adding first object
-	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.jpg")
+	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.png")
 	      object = object.resize_to_fill(180,200)
 	      result = background.composite(object,45,100, Magick::OverCompositeOp)
 	      
 	      #Adding second object
-	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.jpg")
+	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.png")
 	      object = object.resize_to_fill(180,200)
 	      result = result.composite(object,270,100, Magick::OverCompositeOp)
 	      
 	      #Adding third object
-	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_3.jpg")
+	      object = ImageList.new("public/uploads/post/#{post.id}/objects/large_3.png")
 	      object = object.resize_to_fill(180,200)
 	      result = result.composite(object,495,100, Magick::OverCompositeOp)
 	      
 	      #Adding reaction image of object 1
-	      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.jpg")
+	      object = ImageList.new("public/#{post.compare_objects[0].emoticon}.png")
 	      object = object.resize_to_fill(40,40)
 	      result = result.composite(object,50,310, Magick::OverCompositeOp)
 	      
 	      #Adding reaction image of object 2
-	      object = ImageList.new("public/#{post.compare_objects[1].emoticon}.jpg")
+	      object = ImageList.new("public/#{post.compare_objects[1].emoticon}.png")
 	      object = object.resize_to_fill(40,40)
 	      result = result.composite(object,275,310, Magick::OverCompositeOp)
 	      
 	      #Adding reaction image of object 3
-	      object = ImageList.new("public/#{post.compare_objects[2].emoticon}.jpg")
+	      object = ImageList.new("public/#{post.compare_objects[2].emoticon}.png")
 	      object = object.resize_to_fill(40,40)
 	      result = result.composite(object,500,310, Magick::OverCompositeOp)
 	      
@@ -118,7 +118,7 @@ module Frame
 	    
 
 	    #For saving image
-	    result.write("public/uploads/post/#{post.id}/frame.jpg")
+	    result.write("public/uploads/post/#{post.id}/frame.png")
 	    
 
 	    txt = Draw.new
@@ -128,16 +128,16 @@ module Frame
 	    txt.font_weight = Magick::BoldWeight
 	   
 	    if post.comparisons == 2
-	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.png")
 	      frame.annotate(txt,0,0,200,335,"0")
 	      frame.annotate(txt,0,0,500,335,"0")
 	    elsif post.comparisons == 3
-	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.png")
 	      frame.annotate(txt,0,0,130,340,"0")
 	      frame.annotate(txt,0,0,350,340,"0")
 	      frame.annotate(txt,0,0,580,340,"0")
 	    elsif post.comparisons == 4
-	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.jpg")
+	      frame = ImageList.new("public/uploads/post/#{post.id}/frame.png")
 	      frame.annotate(txt,0,0,160,215,"0")
 	      frame.annotate(txt,0,0,480,215,"0")
 	      frame.annotate(txt,0,0,160,425,"0")
@@ -146,7 +146,7 @@ module Frame
 	    elsif post.comparisons == 6
 	    end
 
-	    frame.write("public/uploads/post/#{post.id}/frame2.jpg")
-	    frame.write("app/assets/images/#{post.id}_frame.jpg")
+	    frame.write("public/uploads/post/#{post.id}/frame2.png")
+	    frame.write("app/assets/images/#{post.id}_frame.png")
  	end
 end
