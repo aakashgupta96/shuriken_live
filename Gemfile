@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 gem 'redis', '~>3.2'
 gem 'rmagick'
-gem 'sidekiq'
-gem 'whenever', :require => false
 gem "koala"
 gem 'rufus-scheduler'
 gem 'resque',:require => "resque/server"

@@ -5,10 +5,51 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	
 </head>
 <body>
 
-<%= yield %>
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Step 1</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Step 2</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Step 3</label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Step 4</label>
 
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5">Step 5</label>
+    
+  <section id="content1">
+  <%= yield %>
+  </section>
+    
+  <section id="content2">
+  <%= yield %>
+  </section>
+    
+  <section id="content3">
+  <%= yield %>
+  </section>
+    
+  <section id="content4">
+  <%= yield %>
+  </section>
+
+  <section id="content5">
+  <%= yield %>
+  </section>
+</main>
+  
 </body>
 </html>
