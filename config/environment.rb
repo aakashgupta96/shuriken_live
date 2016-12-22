@@ -9,4 +9,4 @@ Rails.application.initialize!
 require 'carrierwave/orm/activerecord'
 require 'frame'
 require "RMagick"
-Resque.enqueue(StopStream)
+#Resque.enqueue(StopStream)
