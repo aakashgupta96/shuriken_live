@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   mount Resque::Server, :at => "/resque"
 
   get '/' => 'posts#home'
-  get '/dashboard' => 'posts#dashboard', as: "dashboard"
+  get '/steps' => 'posts#steps', as: "steps"
   get '/editor/createFrame'
   get '/editor/testFrame'
   post '/posts/objects'

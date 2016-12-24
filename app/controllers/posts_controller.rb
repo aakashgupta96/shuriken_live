@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def home
   end
   
-  def dashboard
+  def steps
   end
 
   def objects
