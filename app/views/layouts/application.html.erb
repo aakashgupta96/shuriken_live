@@ -30,16 +30,16 @@
   <input id="tab5" type="radio" name="tabs">
   <label for="tab5">Step 5</label>
     
-  <section id="content1">
-  <%= yield %>
+  <section id="content1" >
+  <%= yield :dashboard %>
   </section>
     
   <section id="content2">
-  <%= yield %>
+  <%= yield :new_post %>
   </section>
     
   <section id="content3">
-  <%= yield %>
+  <%= yield :comp_obj %>
   </section>
     
   <section id="content4">
