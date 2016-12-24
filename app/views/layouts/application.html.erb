@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  
   </head>
 <body>
 
@@ -25,45 +26,13 @@
         </li>
       </ul>
     </nav>
+
+    <section id= "pop_form">
+        <%= render 'form' %>
+    </section>  
 </header>
   
-<main>
-  
-  <input id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1">Step 1</label>
-    
-  <input id="tab2" type="radio" name="tabs">
-  <label for="tab2">Step 2</label>
-    
-  <input id="tab3" type="radio" name="tabs">
-  <label for="tab3">Step 3</label>
-    
-  <input id="tab4" type="radio" name="tabs">
-  <label for="tab4">Step 4</label>
-
-  <input id="tab5" type="radio" name="tabs">
-  <label for="tab5">Step 5</label>
-    
-  <section id="content1" >
-  <%= yield :dashboard %>
-  </section>
-    
-  <section id="content2">
-  <%= yield :new_post %>
-  </section>
-    
-  <section id="content3">
-  <%= yield :comp_obj %>
-  </section>
-    
-  <section id="content4">
-  <%= yield %>
-  </section>
-
-  <section id="content5">
-  <%= yield %>
-  </section>
-</main>
+<%= yield %>
   
 </body>
 </html>
