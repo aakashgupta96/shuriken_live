@@ -122,13 +122,15 @@ body>header>nav>ul>li>a:hover
 {
   color:orange;
 }
-/*
-#yield
-{
-  transition: margin-top 1s ease;
-  padding: 0px 5% 0px 5%;
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
 }
-*/
+
+#pop_form{
+  display: none;
+}
+
 @media all and (max-width:1090px)
 {
   body>header

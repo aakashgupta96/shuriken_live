@@ -1,4 +1,4 @@
-<%= form_for(@post,:url => "/posts/objects",:method=>"post") do |f| %>
+<%= form_for(@post=Post.new,:url => "/posts/objects",:method=>"post") do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,26 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Stream_key %><br>
+    <%= f.label :Stream_key %>
     <%= f.text_field :key, required: true %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, required: true %>
-  </div>
+  </div><br>
 
   <div class="field">
-    <%= f.label :comparisons %><br>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :comparisons %>
     <%= f.text_field :comparisons, required: true %>
-  </div>
+  </div><br>
+
   <div class="field">
-    <%= f.label :background_image %><br>
+    <%= f.label :background_Image %>
     <%= f.file_field :background, required: true %>
-  </div>
+  </div><br>
+
   <div class="field">
-    <%= f.label :Duration %><br>
+    <%= f.label :Duration %>
     <%=  f.time_select :duration, start_hour: 0 , end_hour: 3, default:{hour: 0, minute: 30} %>
-  </div>
+  </div><br>
   <div class="actions">
     <%= f.submit "Next" %>
   </div>

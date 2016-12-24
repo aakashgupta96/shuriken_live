@@ -16,8 +16,6 @@
 // = require jquery_ujs
 // = require_tree
 
-
-
 jQuery(document).on('turbolinks:load',function(){
 	jQuery("a[href^='#']").attr('data-turbolinks',false);
 

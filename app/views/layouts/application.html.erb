@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  
   </head>
 <body>
 
@@ -25,11 +26,13 @@
         </li>
       </ul>
     </nav>
+
+    <section id= "pop_form">
+        <%= render 'form' %>
+    </section>  
 </header>
 
-<div id="yield">
-  <%= yield %>  
-</div>
-
+<%= yield %>
+  
 </body>
 </html>

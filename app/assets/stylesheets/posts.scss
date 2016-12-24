@@ -4,87 +4,196 @@
 
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'); 
 
-#dashboard{
-	
-	display : flex;
-	flex-wrap : wrap;
-	flex-direction:column;
-}
 
-#division{
-	padding: 20px 30px 20px 30px;
-	display:flex;
-	justify-content:space-between;
-}
+main {
+  padding-top: 100px;
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 100px;
+  transition: all 1s ease;
 
-.dimage_01{
-	height: 140px;
-    width:470px;
-    margin-right: 50px;
-}
+  label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  font-size: 30px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid transparent;
+  width: 19%;
+  }
 
-.dimage_02{
-	height: 220px;
-    width:200px;
-    margin-right: 150px;
-}
+  a{
+    text-decoration: none;
+    color: #bbb;
+  }
 
-.dimage_03{
-	margin-top: 25px;
-	height: 110px;
-    width:560px;
-    margin-right: 20px;
-}
+  a:hover {
+    color: #888;
+    cursor: pointer;
+  }
 
-.dimage_04{
-	height: 350px;
-    width:520px;
-    margin-right: 20px;
-}
+  input[name=tabs] {
+    display: none;
+  }
 
-#text{
-	width: 40%;
-	color: #888;
-	font-size: 18px;
-	text-align:center;
-	padding-top: 50px;
-}
 
-.stext{
-	margin-top:100px;
-}
+  input[name=tabs]:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid orange;
+    border-bottom: 1px solid #fff;
+  }
 
-#empty{
-	border: 1px solid orange;
-	margin: 20px 300px 20px 300px;
-}
-
-.button {
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4,
+  #tab5:checked ~ #content5 {
     display: block;
-    width: 220px;
-    height: 50px;
-    background: orange;
-    padding: 13px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    text-decoration:none;
-    font-size: 22px;
+  }
+
+
+  section {
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+  }
+
+  #dashboard{
+  
+      display : flex;
+      flex-wrap : wrap;
+      flex-direction:column;
+
+      #division{
+      padding: 20px 30px 20px 30px;
+      display:flex;
+      justify-content:space-between;
+      }
+
+      .dimage_01{
+        height: 140px;
+          width:470px;
+          margin-right: 50px;
+      }
+
+      .dimage_02{
+        height: 220px;
+          width:200px;
+          margin-right: 150px;
+      }
+
+      .dimage_03{
+        margin-top: 25px;
+        height: 110px;
+          width:560px;
+          margin-right: 20px;
+      }
+
+      .dimage_04{
+        height: 350px;
+          width:520px;
+          margin-right: 20px;
+      }
+
+      #text{
+        width: 40%;
+        color: #888;
+        font-size: 18px;
+        text-align:center;
+        padding-top: 50px;
+      }
+
+      .stext{
+        margin-top:100px;
+      }
+
+      #empty{
+        border: 1px solid orange;
+        margin: 20px 300px 20px 300px;
+      }
+
+  }
+
+  .button {
+      display: block;
+      width: 220px;
+      height: 50px;
+      background: orange;
+      padding: 13px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      text-decoration:none;
+      font-size: 22px;
+  }
+
+  #nextpost{ 
+      padding : 50px;
+      display:flex;
+      justify-content: space-around;
+  }
+
+  #nextpost > a:hover{
+    color:white;
+    background-color: orange;
+  }
+
+  #nextpost > a:visited{
+    color:white;
+  }
+
+
+  #new_post{
+
+    display:flex;
+    flex-direction:column;
+    flex-wrap :wrap;
+
+    .field{
+      display : flex;
+      flex-wrap : wrap;
+    }
+
+    label{
+      font-size: 25px;
+      height: 30px;
+      font-weight : bolder;
+      display : inline;
+      padding : 0;
+      margin-right: 50px;
+      text-align: initial;
+    }
+
+    input[type=text]{
+        display : block;
+        width: 50%;
+    }
+
+    input[type=submit]{
+        color:white;
+        background-color : orange;
+        border-color:orange;
+        height : 40px;
+        width: 120px;
+        text-align:center;
+        font-size : 30px;
+        border-shadow : none;
+    }
+  }
 }
 
-#nextpost{
-    padding : 50px;
-	display:flex;
-	justify-content: space-around;
-}
-
-#nextpost > a:hover{
-	color:white;
-	background-color: orange;
-}
-
-#nextpost > a:visited{
-	color:white;
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
 }
 
 .back_image
@@ -124,4 +233,9 @@
 			}
 		}
 	}
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
 }

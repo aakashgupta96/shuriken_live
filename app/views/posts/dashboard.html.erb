@@ -1,33 +1,57 @@
-<section id= "dashboard">
-<div id="division">
-<p id="text">1. Login to your Facebook Page and select Publishing Tools in the top navigation bar.</p>
-<%= image_tag "1.png" ,:class => "dimage_01"%>
-</div>
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1"><a href="/dashboard">Step 1</a></label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2"><a href="/posts/new">Step 2</a></label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3"><a href="/posts/new">Step 3</a></label>
+    
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4"><a href="/posts/new">Step 4</a></label>
 
-<div id="empty"></div>
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5"><a href="/posts/new">Step 5</a></label>
+    
+  <section id= "dashboard">
+	<div id="division">
+	<p id="text">1. Login to your Facebook Page and select Publishing Tools in the top navigation bar.</p>
+	<%= image_tag "1.png" ,:class => "dimage_01"%>
+	</div>
 
-<div id="division">
-<p id="text">2. On the left menu, click on the Video Library option under the Videos section.</p>
-<%= image_tag "2.png" ,:class => "dimage_02"%>
-</div>
+	<div id="empty"></div>
 
-<div id="empty"></div>
+	<div id="division">
+	<p id="text">2. On the left menu, click on the Video Library option under the Videos section.</p>
+	<%= image_tag "2.png" ,:class => "dimage_02"%>
+	</div>
 
-<div id="division">
-<p id="text">3. Click on the + Live button to begin configuring your Live post.</p>
-<%= image_tag "3.png" ,:class => "dimage_03"%>
-</div>
+	<div id="empty"></div>
 
-<div id="empty"></div>
+	<div id="division">
+	<p id="text">3. Click on the + Live button to begin configuring your Live post.</p>
+	<%= image_tag "3.png" ,:class => "dimage_03"%>
+	</div>
 
-<div id="division">
-<p id="text" class="stext">4. Copy the stream key from this and give it to us!</p>
-<%= image_tag "4.png" ,:class => "dimage_04"%>
-</div>
-</section>
+	<div id="empty"></div>
 
-<div id="nextpost">
-<%= link_to 'Lets Get Started', new_post_path, :class => "button"%>
-</div>
+	<div id="division">
+	<p id="text" class="stext">4. Copy the stream key from this and give it to us!</p>
+	<%= image_tag "4.png" ,:class => "dimage_04"%>
+	</div>
+	</section>
+
+	<div id="nextpost">
+	<%= link_to 'Lets Get Started', new_post_path,:class => "button",:onclick => 'return openPopup(this);'%>
+	</div>
+
+	
+</main>
+
+
+
+
 
 
