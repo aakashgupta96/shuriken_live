@@ -61,7 +61,7 @@ body>header
 }
 body
 {
-  padding-top:120px;
+  padding-top:80px;
 }
 body>header>a>img
 {
@@ -122,65 +122,13 @@ body>header>nav>ul>li>a:hover
 {
   color:orange;
 }
-
-p {
-  margin: 0 0 20px;
-  line-height: 1.5;
+/*
+#yield
+{
+  transition: margin-top 1s ease;
+  padding: 0px 5% 0px 5%;
 }
-
-main {
-  padding-top: 100px;
-  min-width: 320px;
-  max-width: 1200px;
-  padding: 50px;
-  margin: 0 auto;
-  background: #fff;
-  margin-bottom: 100px;
-  transition: all 1s ease;
-}
-
-section {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
-}
-
-input {
-  display: none;
-}
-
-label {
-  display: inline-block;
-  margin: 0 0 -1px;
-  font-size: 30px;
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-  width: 19%;
-}
-
-label:hover {
-  color: #888;
-  cursor: pointer;
-}
-
-input:checked + label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid orange;
-  border-bottom: 1px solid #fff;
-}
-
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3,
-#tab4:checked ~ #content4,
-#tab5:checked ~ #content5 {
-  display: block;
-}
-
+*/
 @media all and (max-width:1090px)
 {
   body>header
@@ -243,20 +191,5 @@ input:checked + label {
   #header:target + main
   {
     margin-top:80px;
-  }
-}
-@media screen and (max-width: 650px) {
-  label {
-    font-size: 0;
-  }
-  label:before {
-    margin: 0;
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  label {
-    padding: 15px;
   }
 }

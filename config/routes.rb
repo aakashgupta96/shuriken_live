@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   mount Resque::Server, :at => "/resque"
 
+  get '/' => 'posts#home'
   get '/dashboard' => 'posts#dashboard', as: "dashboard"
   get '/editor/createFrame'
   get '/editor/testFrame'
   post '/posts/objects'
   get '/posts/:id/objects/edit' => 'posts#edit_objects', as: "edit_objects"
   get '/posts/:id/preview' => 'posts#preview', as: "frame_preview"
-  root 'posts#dashboard'
   get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
   post '/posts/:id/publish' => 'posts#publish' , as: "publish_post"
   resources :posts

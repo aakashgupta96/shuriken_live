@@ -86,3 +86,42 @@
 #nextpost > a:visited{
 	color:white;
 }
+
+.back_image
+{
+	background-image: image-url('1.jpg');
+	background-size: 100% 550px;
+	background-repeat: no-repeat;
+	height:530px;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-around;
+	width:100%;
+
+	.black_box
+	{
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 40%;
+		margin: 2% 0% 2% 50%;
+		background-color: black;
+		opacity: 0.7;
+		border-radius: 60px;
+		
+		p
+		{
+			margin: 30px 30px 30px 30px;
+			font-weight: 200;
+			font-size: 34px;
+			line-height: 40px;
+			color: white;
+			text-align: center;
+			a
+			{
+				text-decoration:none;
+				color: red;
+			}
+		}
+	}
+}

@@ -3,6 +3,9 @@ class PostsController < ApplicationController
 
   include Frame
 
+  def home
+  end
+  
   def dashboard
   end
 

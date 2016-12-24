@@ -14,56 +14,22 @@
     <a href="http://www.codingninjas.in"><%= image_tag "logo.png" %></a>
     <nav>
       <a href="#header" class="show" ><i class="fa fa-bars" aria-hidden="true"></i></a>
-            <a href="#x" class="hide"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <a href="#x" class="hide" ><i class="fa fa-bars" aria-hidden="true"></i></a>
       <ul class="col l3 pull-s3">
         <li><a href="#overview">Home</a></li>
         <li><a href="#steps">Steps</a></li>
         <li>
           <div>
-            <a href="#go_live" style="text-decoration:none;">Go Live</a>
+            <a href="#go_live" style="text-decoration:none; font-size: 15px;">Go Live</a>
           </div>
         </li>
       </ul>
     </nav>
 </header>
-  
-<main>
-  
-  <input id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1">Step 1</label>
-    
-  <input id="tab2" type="radio" name="tabs">
-  <label for="tab2">Step 2</label>
-    
-  <input id="tab3" type="radio" name="tabs">
-  <label for="tab3">Step 3</label>
-    
-  <input id="tab4" type="radio" name="tabs">
-  <label for="tab4">Step 4</label>
 
-  <input id="tab5" type="radio" name="tabs">
-  <label for="tab5">Step 5</label>
-    
-  <section id="content1">
-  <%= yield %>
-  </section>
-    
-  <section id="content2">
-  <%= yield %>
-  </section>
-    
-  <section id="content3">
-  <%= yield %>
-  </section>
-    
-  <section id="content4">
-  <%= yield %>
-  </section>
+<div id="yield">
+  <%= yield %>  
+</div>
 
-  <section id="content5">
-  <%= yield %>
-  </section>
-</main>
-  
 </body>
 </html>

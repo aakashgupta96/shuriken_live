@@ -10,10 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//  require turbolinks
+// = require turbolinks
 
 // = require jquery
 // = require jquery_ujs
 // = require_tree
 
 
+
+jQuery(document).on('turbolinks:load',function(){
+	jQuery("a[href^='#']").attr('data-turbolinks',false);
+
+});
