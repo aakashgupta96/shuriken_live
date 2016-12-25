@@ -199,9 +199,9 @@ main {
 .back_image
 {
 	background-image: image-url('1.jpg');
-	background-size: 100% 550px;
+	background-size: 100% 574px;
 	background-repeat: no-repeat;
-	height:530px;
+	height:574px;
 	display: flex;
 	flex-direction:column;
 	justify-content: space-around;
@@ -234,6 +234,96 @@ main {
 		}
 	}
 }
+
+.section
+{
+	padding: 60px 0 60px 0;
+  .heading
+	{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 48px;
+		text-align:center;
+		font-family: "Futura";
+		color: hsl(0,0%,26%);
+		margin-bottom: 60px;
+	}
+	.content
+	{
+    padding: 0px 24% 0px 24%;
+		text-align:center;
+		line-height: 32px;
+		font-size:19px;
+		color:hsl(0, 0%, 40%);
+		margin-bottom:20px;
+		display:flex;
+		flex-wrap: wrap;
+	}
+  .list_head
+  {
+    padding: 0px 18% 0px 18%;
+    text-align:center;
+    line-height: 32px;
+    font-size:24px;
+    color:hsl(0, 0%, 40%);
+    margin-bottom:20px;
+  }
+  .list
+  {
+    padding: 0 20% 0 20%;
+    list-style: square;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li
+    {
+      width: 40%;
+      margin: 20px;
+    }
+  }
+  .video_box
+  {
+    list-style:none;
+    .video
+    {
+      width: 300px;
+      height:200px;
+    } 
+  }
+
+}
+
+.grey
+{
+  background: hsl(0,0%,95%);
+  ul
+  {
+    padding: 0 8% 0 10%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  li
+  {
+    margin: 0 20px 0 20px;
+  }
+  .name
+  {
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  .description
+  {
+    padding: 15px 0 15px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+}
+
 @media screen and (max-width: 400px) {
   label {
     padding: 15px;

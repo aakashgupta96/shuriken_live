@@ -277,7 +277,8 @@ module Frame
 	    txt.stroke = "orange"
 	    txt.fill = "black"
 	    txt.font_weight = Magick::BoldWeight
-	   
+	   	
+	   	#Adding initial reactions count
 	    frame = ImageList.new("public/uploads/post/#{post.id}/frame.png")
 	    if post.comparisons == 2
 	      frame.annotate(txt,0,0,200,335,"0")

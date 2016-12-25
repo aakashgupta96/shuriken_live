@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def objects
+    byebug
     @post = Post.new(post_params)
     @post.save
     @compare_object = CompareObject.new
