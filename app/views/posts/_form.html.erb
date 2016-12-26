@@ -22,18 +22,18 @@
   </div><br>
 
   <div class="field">
-    <%= f.label :comparisons %>
-    <%= f.text_field :comparisons, required: true, placeholder: "Comparisons" %>
+    <%= f.label "Number of comparisons" %>
+    <%= f.select :comparisons, {"Two": 2,"Three": 3,"Four": 4,"Five": 5,"Six": 6},{include_blank: "Select"}, {required: 'true', class: 'select'}%>
   </div><br>
 
   <div class="field">
     <%= f.label :background_Image %>
-    <%= f.file_field :background, required: true%>
+    <%= f.file_field :background, {required: 'true', class: 'file_select'}%>
   </div><br>
 
   <div class="field">
     <%= f.label :Duration %>
-    <%=  f.time_select :duration, start_hour: 0 , end_hour: 3, default:{hour: 0, minute: 30} %>
+    <%=  f.time_select :duration, {start_hour: 0 , end_hour: 3, default:{hour: 0, minute: 30}},{required: 'true', class: 'select'} %>
   </div><br>
   <div class="actions">
     <%= f.submit "Next" %>
