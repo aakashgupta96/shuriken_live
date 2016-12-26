@@ -68,6 +68,14 @@ main {
       flex-wrap : wrap;
       flex-direction:column;
 
+      .aim
+      {
+        padding: 30px 10% 0 10%;
+        font-size: 28px;
+        line-height: 40px;
+        text-align:center;
+        font-weight: 600;
+      }
       #division{
       padding: 20px 30px 20px 30px;
       display:flex;
@@ -75,7 +83,7 @@ main {
       }
 
       .dimage_01{
-        height: 140px;
+        height: 360px;
           width:470px;
           margin-right: 50px;
       }

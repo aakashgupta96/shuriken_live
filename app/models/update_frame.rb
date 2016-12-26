@@ -6,7 +6,7 @@ class UpdateFrame
 
   def self.perform(post_id,count)
     post = Post.find(post_id)
-    @graph = Koala::Facebook::API.new("241493676272963|I4nCO8TjSUEdG_g5myL7oGxSpGA")
+    @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
     count.times do
       reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
       txt = Draw.new

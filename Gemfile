@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+
+gem 'devise'
+gem 'omniauth-facebook'
+
 gem 'redis', '~>3.2'
 gem 'rmagick'
 gem "koala"
