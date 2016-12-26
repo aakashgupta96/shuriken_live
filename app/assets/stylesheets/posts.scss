@@ -5,11 +5,15 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'); 
 
 
+body{
+  background : #eee;
+  padding:20px 30px 0 30px;
+}
 main {
   padding-top: 100px;
   min-width: 320px;
   max-width: 1200px;
-  padding: 50px;
+  padding: 30px;
   margin: 0 auto;
   background: #fff;
   margin-bottom: 100px;
@@ -101,7 +105,7 @@ main {
 
       #text{
         width: 40%;
-        color: #888;
+        color: hsl(0,0%,30%);
         font-size: 18px;
         text-align:center;
         padding-top: 50px;
@@ -120,9 +124,9 @@ main {
 
   .button {
       display: block;
-      width: 220px;
+      width: 150px;
       height: 50px;
-      background: orange;
+      background-color: orange;
       padding: 13px;
       text-align: center;
       color: white;
@@ -149,17 +153,23 @@ main {
 
   #new_post{
 
+
     display:flex;
     flex-direction:column;
+    align-items:center;
     flex-wrap :wrap;
+    margin-top: 50px;
 
     .field{
       display : flex;
+      width: 50%;
       flex-wrap : wrap;
+      padding-bottom: 10px;
     }
 
     label{
       font-size: 25px;
+      width: 25%;
       height: 30px;
       font-weight : bolder;
       display : inline;
@@ -168,9 +178,17 @@ main {
       text-align: initial;
     }
 
-    input[type=text]{
+    input[type="text"]{
         display : block;
         width: 50%;
+        border:none;
+        border-bottom : solid 1px #bbb;
+        transition: border 0.1s;
+    }
+
+    input[type="text"]:focus{
+        outline: none !important;
+        border-bottom : solid 2px orange;
     }
 
     input[type=submit]{

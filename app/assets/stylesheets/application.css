@@ -102,7 +102,7 @@ body>header>nav>ul>li>a
 }
 body>header>nav>ul>li>div
 {
-  width:100px;
+  width: 140px;
   height: 40px;
   background-color: orange;
 }
@@ -124,10 +124,6 @@ body>header>nav>ul>li>a:hover
 p {
   margin: 0 0 20px;
   line-height: 1.5;
-}
-
-#pop_form{
-  display: none;
 }
 
 @media all and (max-width:1090px)

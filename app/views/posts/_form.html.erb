@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Stream_key %>
-    <%= f.text_field :key, required: true %>
+    <%= f.label :Stream_key %><br>
+    <%= f.text_field :key, required: true, placeholder: "Stream key"%>
   </div><br>
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title, required: true %>
+    <%= f.text_field :title, required: true, placeholder: "Title"%>
   </div><br>
 
   <div class="field">
     <%= f.label :comparisons %>
-    <%= f.text_field :comparisons, required: true %>
+    <%= f.text_field :comparisons, required: true, placeholder: "Comparisons" %>
   </div><br>
 
   <div class="field">
     <%= f.label :background_Image %>
-    <%= f.file_field :background, required: true %>
+    <%= f.file_field :background, required: true%>
   </div><br>
 
   <div class="field">
