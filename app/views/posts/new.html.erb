@@ -1,8 +1,8 @@
 <main>
-  <input id="tab1" type="radio" name="tabs" checked>
+  <input id="tab1" type="radio" name="tabs" >
   <label for="tab1"><a href="/steps">Step 1</a></label>
     
-  <input id="tab2" type="radio" name="tabs">
+  <input id="tab2" type="radio" name="tabs" checked>
   <label for="tab2"><a href="/posts/new">Step 2</a></label>
     
   <input id="tab3" type="radio" name="tabs">
@@ -13,8 +13,7 @@
 
   <input id="tab5" type="radio" name="tabs">
   <label for="tab5"><a href="/posts/new">Step 5</a></label>
-  
-  <section id= "pop_form">
+  <section>
         <%= render 'form' %>
-    </section>
+  </section>
 </main>

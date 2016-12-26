@@ -16,7 +16,6 @@
       xfbml      : true,
       version    : 'v2.8'
     });
-    FB.AppEvents.logPageView();
   };
 
   (function(d, s, id){
@@ -27,31 +26,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<!-- <button id="liveButton">Create Post</button>
-<script>
-document.getElementById('liveButton').onclick = function() {
-  FB.ui({
-    display: 'popup',
-    method: 'live_broadcast',
-    phase: 'create',
-}, function(response) {
-    if (!response.id) {
-      alert('dialog canceled');
-      return;
-    }
-    alert('stream url:' + response.secure_stream_url);
-    FB.ui({
-      display: 'popup',
-      method: 'live_broadcast',
-      phase: 'publish',
-      broadcast_data: response,
-    }, function(response) {
-    alert("video status: \n" + response.status);
-    });
-  });
-};
-</script>
- --><header id="header">
+<header id="header">
     <a href="http://www.codingninjas.in"><%= image_tag "logo.png" %></a>
     <nav>
       <a href="#header" class="show" ><i class="fa fa-bars" aria-hidden="true"></i></a>

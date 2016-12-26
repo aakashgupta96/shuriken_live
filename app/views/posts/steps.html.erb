@@ -20,34 +20,27 @@
   		Our aim of this step is to generate a stream key from facebook so that we can use it to stream video to your post. 
   	</div>
 	<div id="division">
-	<p id="text">1. Click the <button id="liveButton">New Post</button> button and login to your facebook account.</p>
-	<%= image_tag "1.png" ,:class => "dimage_01"%>
+	<p id="text">1. Click the <a id="liveButton" class="new_post">New Post</a> button and login to your facebook account.</p>
+	<%= image_tag "step_1_1.png" ,:class => "dimage_01"%>
 	</div>
 
 	<div id="empty"></div>
 
 	<div id="division">
-	<p id="text">2. Select where you want to post your video from the options provided.</p>
-	<%= image_tag "2.png" ,:class => "dimage_01"%>
+	<p id="text">2. Select where you want to post your video from the options provided and then press the next button.</p>
+	<%= image_tag "step_1_2.jpg" ,:class => "dimage_01"%>
 	</div>
 
 	<div id="empty"></div>
 
 	<div id="division">
-	<p id="text">3. Click on the + Live button to begin configuring your Live post.</p>
-	<%= image_tag "3.png" ,:class => "dimage_03"%>
-	</div>
-
-	<div id="empty"></div>
-
-	<div id="division">
-	<p id="text" class="stext">4. Copy the stream key from this and give it to us!</p>
-	<%= image_tag "4.png" ,:class => "dimage_04"%>
+	<p id="text" class="stext">3. Copy the stream key from this and give it to us in step 2!</p>
+	<%= image_tag "step_1_3.jpg" ,:class => "dimage_01"%>
 	</div>
 	</section>
 
 	<div id="nextpost">
-	<%= link_to 'Lets Get Started', new_post_path,:class => "button",:onclick => 'return openPopup(this);'%>
+	<%= link_to 'NEXT', new_post_path,:class => "button",:onclick => 'return openPopup(this);'%>
 	</div>
 
 	
@@ -63,14 +56,12 @@ document.getElementById('liveButton').onclick = function() {
       alert('dialog canceled');
       return;
     }
-    alert('stream url:' + response.secure_stream_url);
     FB.ui({
       display: 'popup',
       method: 'live_broadcast',
       phase: 'publish',
       broadcast_data: response,
     }, function(response) {
-    alert("video status: \n" + response.status);
     });
   });
 };
