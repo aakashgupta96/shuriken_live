@@ -28,8 +28,10 @@ class BackgroundUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
+  process convert: 'png'
+  
   version :large do
-     process :efficient_conversion => [720, 1280]
+     process resize_to_fit: [720, 1280]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -54,20 +56,5 @@ class BackgroundUploader < CarrierWave::Uploader::Base
   def filename
      "1.png" if original_filename
    end
-
-
-  private
-
-  def efficient_conversion(width, height)
-    manipulate! do |img|
-      img.format("png") do |c|
-        c.fuzz        "3%"
-        c.trim
-        c.resize      "#{width}x#{height}>"
-        c.resize      "#{width}x#{height}<"
-      end
-      img
-    end
-  end
-
+   
 end
