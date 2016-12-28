@@ -210,14 +210,16 @@ main{
 
 
 #new_compare_object{
+    
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+  .field{
     display : flex;
-    flex-direction : column;
     flex-wrap : wrap;
-
-    .field{
-      display : flex;
-      flex-wrap : wrap;
-      justify-content: space-around;
+    width:80%;
+    justify-content: space-around;
     }
 
     label{
@@ -268,7 +270,8 @@ main{
 
   h2{
       margin-top: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
+      font-size: 50px;
       color: orange;
       font-weight: bolder;
   }

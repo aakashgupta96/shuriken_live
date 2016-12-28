@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 
 
   def publish
-      byebug
+      #byebug
       Resque.enqueue(StartStream,@post.id)
       Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2))
   end

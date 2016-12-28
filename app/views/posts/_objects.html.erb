@@ -2,15 +2,15 @@
 	
 	<%= hidden_field_tag :id,@post.id %>
 	<%@post.comparisons.times do |i|%>
-		
+	<div class="object">
 		<h3 style= "color: orange;">For object <%=i+1%> : </h3>
 		<br/>
-		<div id="field"> 
+		<div class="field"> 
 		<%= f.label "Name:" %> 
 		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
 		</div>
     	<br/>
-    	<div id="field">
+    	<div class="field">
     	<%= f.label "Reaction:" %> 
 		<div id="radio">Like</div>
 		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false%>
@@ -26,13 +26,15 @@
 		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false%>
 		</div>
 		<br/>
-		<div id="field">	
+		<div class="field">	
 		<%= f.label "Image:" %>
 		<%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
 		</div>
 		<br/>
 		<br/>
+	</div>
   	<% end %>
+  	
   	<div id="submit">
   	<%= f.submit "Submit"%>
   	</div>
