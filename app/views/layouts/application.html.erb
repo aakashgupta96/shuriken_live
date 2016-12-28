@@ -26,6 +26,11 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+<%# if user_signed_in? %>
+  <%#= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
+<%# else %>
+  <%#= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+<%# end %>
 <header id="header">
     <a href="http://www.codingninjas.in"><%= image_tag "logo.png" %></a>
     <nav>

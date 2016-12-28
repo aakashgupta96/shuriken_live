@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show,:publish,:create,:preview,:edit_objects, :edit_title, :edit, :update, :video_id, :destroy]
-
+  before_action :authenticate_user!, only: []
   include Frame
 
   def home
