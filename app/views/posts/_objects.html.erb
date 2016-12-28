@@ -2,21 +2,47 @@
 	
 	<%= hidden_field_tag :id,@post.id %>
 	<%@post.comparisons.times do |i|%>
-		<h3>For object <%=i+1%> : </h3>
-    	Name: <%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
+		
+		<h3 style= "color: orange;">For object <%=i+1%> : </h3>
+		<br/>
+		<div id="field"> 
+		<%= f.label "Name:" %> 
+		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
+		</div>
     	<br/>
-    	<%= f.label "Reaction" %>:
-		Like<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false%>
-		Love<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false%>
-		Haha<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false%>
-		Wow<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false%>
-		Sad<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false%>
-		Angry<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false%>
-		<br/>	
-		Image: <%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
+    	<div id="field">
+    	<%= f.label "Reaction:" %> 
+		<div id="radio">Like</div>
+		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false%>
+		<div id="radio">Love</div>
+		<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<div id="radio">Haha</div>
+		<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<div id="radio">Wow</div>
+		<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<div id="radio">Sad</div>
+		<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<div id="radio">Angry</div>
+		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false%>
+		</div>
+		<br/>
+		<div id="field">	
+		<%= f.label "Image:" %>
+		<%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
+		</div>
 		<br/>
 		<br/>
   	<% end %>
-  	<%= submit_tag "Submit" %>
+  	<div id="submit">
+  	<%= f.submit "Submit",:id => "preview_submit"%>
+  	</div>
 <% end %>
+
+<script>
+	document.getElementById('preview_submit').onclick = function(){
+		document.body.style.opacity = 0.9;
+		var div = document.createElement("div");
+		div.setattribute('id','modal'); 
+	}
+</script>
 
