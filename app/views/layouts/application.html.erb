@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Live</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   
   </head>
 <body>
+
+<% unless notice.nil? %>
+  <div class="notice"><%=notice %></div>
+<% end %>
+
+ <% unless alert.nil? %>
+ <script >
+   alert("Please complete previous steps")
+ </script>
+  <div class="alert"><%#=alert %></div>
+<% end %>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
