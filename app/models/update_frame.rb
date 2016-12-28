@@ -5,15 +5,15 @@ class UpdateFrame
   @queue = :update_frame
 
   def self.perform(post_id,count)
-    sleep(20);
+    sleep(10);
     post = Post.find(post_id)
     @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
     count.times do
       reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
       txt = Draw.new
       txt.pointsize = 30
-      txt.stroke = "orange"
-      txt.fill = "black"
+      txt.stroke = "black"
+      txt.fill = "white"
       txt.font_weight = Magick::BoldWeight
      
       if post.comparisons == 2

@@ -16,8 +16,8 @@ module Frame
 
 	    txt = Draw.new
 	    txt.pointsize = 30
-	    txt.stroke = "orange"
-	    txt.fill = "black"
+	    txt.stroke = "black"
+	    txt.fill = "white"
 	    txt.font_weight = Magick::BoldWeight
 		 
 	    #Adding compare objects to image formed
@@ -258,8 +258,8 @@ module Frame
 
 	    txt = Draw.new
 	    txt.pointsize = 30
-	    txt.stroke = "orange"
-	    txt.fill = "black"
+	    txt.stroke = "black"
+	    txt.fill = "white"
 	    txt.font_weight = Magick::BoldWeight
 	   	
 	   	#Adding initial reactions count
