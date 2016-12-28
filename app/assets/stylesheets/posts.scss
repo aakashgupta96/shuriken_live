@@ -260,10 +260,35 @@ main {
     }
 }
 
-#modal{
-  height: 100px;
-  width: 100px;
-  background-color : grey;
+#frame{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  align-items:center;
+
+  h2{
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: orange;
+      font-weight: bolder;
+  }
+
+  img{
+      height: 405px;
+      width: 720px;
+      margin-bottom: 10px;
+  }
+
+  a{
+      text-decoration:none;
+      background-color:orange;
+      color:white;
+      font-size: 20px;
+      width: 150px;
+      height: 40px;
+      text-align:center;
+      padding-top: 7px;
+    }
 }
 
 .back_image

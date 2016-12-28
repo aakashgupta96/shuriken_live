@@ -34,15 +34,7 @@
 		<br/>
   	<% end %>
   	<div id="submit">
-  	<%= f.submit "Submit",:id => "preview_submit"%>
+  	<%= f.submit "Submit"%>
   	</div>
 <% end %>
-
-<script>
-	document.getElementById('preview_submit').onclick = function(){
-		document.body.style.opacity = 0.9;
-		var div = document.createElement("div");
-		div.setattribute('id','modal'); 
-	}
-</script>
 

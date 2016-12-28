@@ -11,6 +11,8 @@ class PostsController < ApplicationController
 
   def objects
     @post = Post.new(post_params)
+    @post.video_id = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
+    #byebug
     @post.save
     @compare_object = CompareObject.new
   end
@@ -41,13 +43,10 @@ class PostsController < ApplicationController
     
   end
 
-  def video_id
-    Resque.enqueue(StartStream,@post.id)
-  end
 
   def publish
-      @post.video_id = params[:post][:video_id].split("/").last
-      @post.save!
+      byebug
+      Resque.enqueue(StartStream,@post.id)
       Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2))
   end
 
