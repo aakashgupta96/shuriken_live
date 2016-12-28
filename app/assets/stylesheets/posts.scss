@@ -291,6 +291,53 @@ main{
     }
 }
 
+#last_step{
+  display : flex;
+      flex-wrap : wrap;
+      flex-direction:column;
+      
+      #division{
+      padding: 50px 30px 50px 30px;
+      display:flex;
+      justify-content:space-between;
+      }
+
+      .step_image{
+        height: 360px;
+          width:470px;
+          margin-right: 50px;
+      } 
+
+      #text{
+        width: 40%;
+        color: hsl(0,0%,30%);
+        font-size: 22px;
+        text-align:center;
+        padding-top: 100px;
+      }
+
+      span{
+          font-size: 30px;
+          color: red;
+      }
+
+      .button{
+        padding : 50px;
+        display:flex;
+        justify-content: space-around;
+        background-color: orange;
+        color: white;
+        font-size:26px;
+        font-weight: 600;
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 1px 1px 3px 1px hsl(29,100%,40%);
+        transition: all 0.1s ease-out;
+        margin-bottom: 50px;
+      }
+}
+
 .back_image
 {
 	background-image: image-url('1.jpg');

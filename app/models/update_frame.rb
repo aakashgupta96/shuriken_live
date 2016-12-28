@@ -5,6 +5,7 @@ class UpdateFrame
   @queue = :update_frame
 
   def self.perform(post_id,count)
+    sleep(20);
     post = Post.find(post_id)
     @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
     count.times do

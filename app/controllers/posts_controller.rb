@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show,:publish,:create,:preview,:edit_objects, :edit_title, :edit, :update, :video_id, :destroy]
+  before_action :set_post, only: [:show,:publish,:create,:preview,:edit_objects, :start_update,:edit_title, :edit, :update, :video_id, :destroy]
   before_action :authenticate_user!, only: []
   include Frame
 
@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def objects
     @post = Post.new(post_params)
     @post.video_id = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
-    #byebug
     @post.save
     @compare_object = CompareObject.new
   end
@@ -45,11 +44,13 @@ class PostsController < ApplicationController
 
 
   def publish
-      byebug
       Resque.enqueue(StartStream,@post.id)
-      Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2))
   end
 
+  def start_update
+    Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2))
+    redirect_to root_path
+  end
   # POST /posts
   # POST /posts.json
   def create
