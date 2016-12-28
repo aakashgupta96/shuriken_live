@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/posts/:id/preview' => 'posts#preview', as: "frame_preview"
   get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
   post '/posts/:id/publish' => 'posts#publish' , as: "publish_post"
+  get '/posts/:id/finish' => 'posts#start_update', as: "finish"
   resources :posts
   
   # Example of regular route:

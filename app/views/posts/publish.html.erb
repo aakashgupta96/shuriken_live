@@ -14,7 +14,16 @@
   <input id="tab5" type="radio" name="tabs" checked>
   <label for="tab5"><a href="/posts/:id/publish">Step 5</a></label>
 
-  <section>
-  	
+  <section id="last_step">    
+    <div id="division">
+    <p id="text">As soon as the 'Go Live' button is activate, Click it and <span>Finish the steps here as well.</span></p>
+    <%= image_tag "step_5_1.jpg" ,:class => "step_image"%>
+    </div>
+
+
+    <%= link_to "FINISH",finish_path(@post.id), method: "get", class: "button"%>
   </section>
+  <script>
+    alert("Do not click 'FINISH' button before going LIVE on FB")
+  </script>
 </main>
