@@ -102,7 +102,7 @@ main{
         color: hsl(0,0%,30%);
         font-size: 18px;
         text-align:center;
-        line-height: 35px;
+        #line-height: 35px;
         padding-top: 50px;
       }
 
@@ -227,6 +227,13 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    .item_head
+    {
+      color: orange;
+      text-align: center; 
+      font-size: 30px;
+      margin: 15px 0 15px 0;
+    }
   }
   .field{
     display : flex;
@@ -234,10 +241,10 @@ main{
     width:60%;
     }
 
-    label{
+   label{
       font-size: 20px;
       width: 25%;
-      height: 20px;
+      height : 20px;
       font-weight : bolder;
       display : inline;
     }
@@ -261,11 +268,13 @@ main{
         padding-right: 5px;
         padding-left :  5px;
     }
+    
     input[type="radio"]
     {
     	position:relative;
     	top: 10px;
     }
+
     input[type="submit"]{
         color:white;
         background-color : orange;
@@ -276,6 +285,7 @@ main{
         font-size : 30px;
         border-shadow : none;
     }
+
     .reaction
     {
       width: 40px;

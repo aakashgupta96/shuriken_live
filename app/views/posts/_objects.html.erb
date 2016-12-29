@@ -3,7 +3,7 @@
 	<%= hidden_field_tag :id,@post.id %>
 	<%@post.comparisons.times do |i|%>
 	<div class="object">
-		<h3 style= "color: orange; text-align: center; font-size: 30px;">Item <%=i+1%> : </h3></br>
+		<h3 class="item_head">Item <%=i+1%> : </h3></br>
 		<div class="field"> 
 		<%= f.label "Name:" %> 
 		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
@@ -33,7 +33,6 @@
 		</div>
 		<br/>
 		<br/>
-	</div>
   	<% end %>
   	
   	<div id="submit">
