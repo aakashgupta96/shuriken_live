@@ -6,7 +6,7 @@
 		<h3 class="item_head">Item <%=i+1%> : </h3></br>
 		<div class="field"> 
 		<%= f.label "Name:" %> 
-		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true %>
+		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true, maxlength: "12" %>
 		</div>
     	<br/>
     	<div class="field">

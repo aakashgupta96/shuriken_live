@@ -11,7 +11,29 @@ class PostsController < ApplicationController
 
   def objects
     @post = Post.new(post_params)
-    @post.video_id = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
+    x = params[:post][:video_id]
+    unless x.nil?
+      x= x.split("?")
+      unless x.nil?
+        x = x.last.split("=")
+        unless x.nil?
+          x = x.second
+          unless x.nil?
+            x = x.split("\"").first
+            @post.video_id = x
+          else
+           redirect_to new_post_path, alert: "Invalid video embed link"
+          end
+        else
+          redirect_to new_post_path, alert: "Invalid video embed link"
+        end
+      else
+        redirect_to new_post_path, alert: "Invalid video embed link"
+      end
+    else
+      redirect_to new_post_path, alert: "Invalid video embed link"
+    end
+    
     @post.save
     @compare_object = CompareObject.new
   end

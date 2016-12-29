@@ -10,7 +10,7 @@ module Frame
 	    # Adding title to background
 	    title = Draw.new
 	    title.gravity = Magick::NorthGravity
-	    title.pointsize = 40
+	    title.pointsize = 38
 	    title.stroke = "black"
 	    title.fill = "white"
 	    title.font_weight = Magick::BoldWeight
@@ -90,7 +90,7 @@ module Frame
 	      result.annotate(txt, 0,0,510,360,post.compare_objects[2].name)
 	    elsif post.compare_objects.count == 4
 	    	
-	      title.pointsize = 35
+	      title.pointsize = 32
 	      result.annotate(title, 0,0,0,5, post.title)
 	    
 	      #Adding compare objects' images
@@ -135,14 +135,14 @@ module Frame
 	      
 	      #Adding name for objects
 	      txt.pointsize = 28
-	      result.annotate(txt, 0,0,120,60,post.compare_objects[0].name)
-	      result.annotate(txt, 0,0,480,60,post.compare_objects[1].name)
-	      result.annotate(txt, 0,0,120,240,post.compare_objects[2].name)
-	      result.annotate(txt, 0,0,480,240,post.compare_objects[3].name)
+	      result.annotate(txt, 0,0,100,60,post.compare_objects[0].name)
+	      result.annotate(txt, 0,0,440,60,post.compare_objects[1].name)
+	      result.annotate(txt, 0,0,100,240,post.compare_objects[2].name)
+	      result.annotate(txt, 0,0,440,240,post.compare_objects[3].name)
 
 	    elsif post.compare_objects.count == 5
 
-	      title.pointsize = 35
+	      title.pointsize = 32
 	      result.annotate(title, 0,0,0,5, post.title)
 	    
 	      #Adding objects' image
@@ -186,6 +186,7 @@ module Frame
 	      # result = result.composite(object,555,310, Magick::OverCompositeOp)
 	      
 	      #Adding name for objects
+	      txt.pointsize = 22;
 	      result.annotate(txt,0,0,45,60,post.compare_objects[0].name)
 	      result.annotate(txt,0,0,270,60,post.compare_objects[1].name)
 	      result.annotate(txt,0,0,500,60,post.compare_objects[2].name)
@@ -193,7 +194,7 @@ module Frame
 	      result.annotate(txt,0,0,370,240,post.compare_objects[4].name)
 	    elsif post.compare_objects.count == 6
 
-	   	  title.pointsize = 35
+	   	  title.pointsize = 32
 	      result.annotate(title, 0,0,0,5, post.title)
 	    
 	      #Adding objects' image
@@ -243,6 +244,7 @@ module Frame
 	      # result = result.composite(object,555,310, Magick::OverCompositeOp)
 	      
 	      #Adding name for objects
+	      txt.pointsize = 22;
 	      result.annotate(txt,0,0,45,60,post.compare_objects[0].name)
 	      result.annotate(txt,0,0,270,60,post.compare_objects[1].name)
 	      result.annotate(txt,0,0,500,60,post.compare_objects[2].name)

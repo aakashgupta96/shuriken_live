@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Live</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true%>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   
@@ -15,8 +15,10 @@
 <% end %>
 
  <% unless alert.nil? %>
+ <div id= "alert" style="display: none;"><%=alert%></div>
  <script >
-   alert("Please complete previous steps")
+   var x = document.getElementById("alert").innerHTML
+   alert(x)
  </script>
   <div class="alert"><%#=alert %></div>
 <% end %>
