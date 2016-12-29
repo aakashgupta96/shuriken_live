@@ -97,7 +97,7 @@ main{
         color: hsl(0,0%,30%);
         font-size: 18px;
         text-align:center;
-        line-height: 35px;
+        #line-height: 35px;
         padding-top: 50px;
       }
 
@@ -219,14 +219,13 @@ main{
   .field{
     display : flex;
     flex-wrap : wrap;
-    width:80%;
     justify-content: space-around;
-    }
+  }
 
-    label{
+   label{
       font-size: 20px;
       width: 25%;
-      height: 20px;
+      height : 20px;
       font-weight : bolder;
       display : inline;
     }
@@ -251,6 +250,8 @@ main{
         padding-left :  5px;
     }
 
+    
+
     input[type="submit"]{
         color:white;
         background-color : orange;
@@ -261,6 +262,7 @@ main{
         font-size : 30px;
         border-shadow : none;
     }
+
     .reaction
     {
       width: 40px;

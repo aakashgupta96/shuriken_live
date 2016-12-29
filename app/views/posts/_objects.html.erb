@@ -2,7 +2,6 @@
 	
 	<%= hidden_field_tag :id,@post.id %>
 	<%@post.comparisons.times do |i|%>
-	<div class="object">
 		<h3 style= "color: orange;">For object <%=i+1%> : </h3>
 		<br/>
 		<div class="field"> 
@@ -34,7 +33,6 @@
 		</div>
 		<br/>
 		<br/>
-	</div>
   	<% end %>
   	
   	<div id="submit">

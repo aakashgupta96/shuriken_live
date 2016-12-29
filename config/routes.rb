@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", :omniauth_callbacks => "users/omniauth_callbacks"}
+  #devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", :omniauth_callbacks => "users/omniauth_callbacks"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
@@ -10,15 +10,15 @@ Rails.application.routes.draw do
   # end
   root 'posts#home'
   get '/steps' => 'posts#steps', as: "steps"
-  get '/editor/createFrame'
-  get '/editor/testFrame'
+  #get '/editor/createFrame'
+  #get '/editor/testFrame'
   post '/posts/objects'
-  get '/posts/:id/objects/edit' => 'posts#edit_objects', as: "edit_objects"
+  #get '/posts/:id/objects/edit' => 'posts#edit_objects', as: "edit_objects"
   get '/posts/:id/preview' => 'posts#preview', as: "frame_preview"
-  get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
+  #get '/posts/:id/video'=> 'posts#video_id', as: "post_video_id"
   post '/posts/:id/publish' => 'posts#publish' , as: "publish_post"
   get '/posts/:id/finish' => 'posts#start_update', as: "finish"
-  resources :posts
+  resources :posts, :except => [:edit , :show , :index , :update, :destroy]
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
