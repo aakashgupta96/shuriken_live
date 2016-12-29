@@ -15,7 +15,7 @@ main{
   background: #fff;
   transition: all 0.5s ease;
 
-  label {
+  >label {
   display: inline-block;
   margin: 0 0 -1px;
   font-size: 30px;
@@ -224,8 +224,7 @@ main{
   .field{
     display : flex;
     flex-wrap : wrap;
-    width:80%;
-    justify-content: space-around;
+    width:60%;
     }
 
     label{
@@ -238,7 +237,7 @@ main{
 
    input[type="text"]{
         display : inline;
-        width: 50%;
+        #width: 50%;
         border:none;
         border-bottom : solid 1px #bbb;
         transition: border 0.1s;
@@ -257,8 +256,8 @@ main{
     }
     input[type="radio"]
     {
-    	#position:relative;
-    	#top: 20px;
+    	position:relative;
+    	top: 10px;
     }
     input[type="submit"]{
         color:white;
