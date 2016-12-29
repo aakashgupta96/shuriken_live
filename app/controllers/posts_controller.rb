@@ -63,7 +63,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         createFrame
-        format.html { redirect_to frame_preview_path(@post.id), notice: 'Post was successfully created.' }
+        format.html { redirect_to frame_preview_path(@post.id)}
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
