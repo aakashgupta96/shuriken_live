@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def start_update
-    Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2))
+    Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2)+50)
     redirect_to root_path
   end
   # POST /posts

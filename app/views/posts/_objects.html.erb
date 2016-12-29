@@ -11,25 +11,25 @@
     	<br/>
     	<div class="field">
     	<%= f.label "Reaction:" %> 
-		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false%>
+		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/like.png" class="reaction"></div>
 		
-		<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/love.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/haha.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/wow.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/sad.png" class="reaction"></div>
-		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false%>
+		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
 		<div id="radio"><img src="/assets/angry.png" class="reaction"></div>
 		</div>
 		<br/>
 		<div class="field">	
 		<%= f.label "Image:" %>
 		<%= f.file_field :image, name: "compare_object[#{i}][image]", required: true%>
-		<strong>Recommended scale: 1080x720</strong>
+		<strong>Recommended scale: 1280x720</strong>
 		</div>
 		<br/>
 		<br/>
@@ -40,3 +40,29 @@
   	</div>
 <% end %>
 
+<script>
+
+	fun = function(e)
+	{
+		y = $('input[class="radio"]')
+		 count = 0;
+		for(j=0;j<y.length;j++)
+		 {
+			if(y[j].checked && this.value == y[j].value)
+			{
+				count++;
+			}
+		}
+		if(count>1)
+		{
+			e.preventDefault();
+			alert("Already Selected");
+		}
+	};
+	x = $('input[class="radio"]')
+	for(i=0;i<x.length;i++)
+	{
+		temp = x[i];
+		x[i].addEventListener('click',fun)
+	};
+</script>

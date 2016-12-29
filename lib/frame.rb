@@ -5,13 +5,14 @@ module Frame
 	    post = Post.last
 	    background = ImageList.new("public/uploads/post/#{post.id}/background/large_1.png")
 	    result = background
+	    result.resize!(720,405)
 	    
 	    # Adding title to background
 	    title = Draw.new
 	    title.gravity = Magick::NorthGravity
 	    title.pointsize = 40
 	    title.stroke = "black"
-	    title.fill = "#ffffff"
+	    title.fill = "white"
 	    title.font_weight = Magick::BoldWeight
 
 	    txt = Draw.new
