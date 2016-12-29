@@ -5,10 +5,11 @@ class UpdateFrame
   @queue = :update_frame
 
   def self.perform(post_id,count)
-    sleep(10);
     post = Post.find(post_id)
     @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
-    count.times do
+    error = 0
+    count.times do |i|
+    begin
       reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
       txt = Draw.new
       txt.pointsize = 30
@@ -68,11 +69,19 @@ class UpdateFrame
         frame.annotate(txt,0,0,580,380,obj6.to_s)
       end
 
-      puts "Writing Frame"
+      puts "Writing #{i+1}/#{count} Frame"
       
       frame.write("public/uploads/post/#{post.id}/frame2.tmp.png")
       %x[mv "public/uploads/post/#{post.id}/frame2.tmp.png" "public/uploads/post/#{post.id}/frame2.png"]
       sleep(1.5)
+      rescue
+        error = error + 1
+        if(error<count)
+          sleep(1)
+          puts "Error occured ", error, " times"
+          retry
+        end
+      end
     end
   end
 

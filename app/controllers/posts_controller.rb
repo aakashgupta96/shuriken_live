@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show,:publish,:create,:preview,:edit_objects, :start_update,:edit_title, :edit, :update, :video_id, :destroy]
+  before_action :set_post, only: [:publish,:create,:preview, :edit_title, :edit, :update, :video_id, :destroy]
   before_action :authenticate_user!, only: []
+  
   include Frame
 
   def home
@@ -11,44 +12,28 @@ class PostsController < ApplicationController
 
   def objects
     @post = Post.new(post_params)
-    x = params[:post][:video_id]
-    unless x.nil?
-      x= x.split("?")
-      unless x.nil?
-        x = x.last.split("=")
-        unless x.nil?
-          x = x.second
-          unless x.nil?
-            x = x.split("\"").first
-            @post.video_id = x
-          else
-           redirect_to new_post_path, alert: "Invalid video embed link"
-          end
-        else
-          redirect_to new_post_path, alert: "Invalid video embed link"
-        end
-      else
-        redirect_to new_post_path, alert: "Invalid video embed link"
-      end
-    else
+    begin
+      x = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
+    rescue
       redirect_to new_post_path, alert: "Invalid video embed link"
+      return
     end
-    
+    @post.video_id = x
     @post.save
     @compare_object = CompareObject.new
   end
 
   # GET /posts
   # GET /posts.json
-  def index
-    @posts = Post.new
-  end
+  # def index
+  #   @posts = Post.new
+  # end
 
   # GET /posts/1
   # GET /posts/1.json
-  def show
+  # def show
     
-  end
+  # end
 
   # GET /posts/new
   def new
@@ -56,9 +41,9 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit_objects
-    @compare_object = CompareObject.new
-  end
+  # def edit_objects
+  #   @compare_object = CompareObject.new
+  # end
   
   def preview
     
@@ -67,12 +52,9 @@ class PostsController < ApplicationController
 
   def publish
       Resque.enqueue(StartStream,@post.id)
+      Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2)+20)
   end
 
-  def start_update
-    Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2)+50)
-    redirect_to root_path
-  end
   # POST /posts
   # POST /posts.json
   def create
@@ -124,9 +106,9 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find_by_id(params[:id])
+      @post = Post.find_by_id(params[:id]) 
       if @post.nil?
-          redirect_to '/steps', alert: "Invalid Choice"
+        redirect_to root_path, alert: "Invalid URL"
       end
     end
 

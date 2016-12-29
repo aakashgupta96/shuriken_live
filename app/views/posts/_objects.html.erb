@@ -3,7 +3,7 @@
 	<%= hidden_field_tag :id,@post.id %>
 	<%@post.comparisons.times do |i|%>
 	<div class="object">
-		<h3 class="item_head">Item <%=i+1%> : </h3></br>
+		<h3 class="item_head">Comparison Item <%=i+1%> : </h3></br>
 		<div class="field"> 
 		<%= f.label "Name:" %> 
 		<%= f.text_field :name, name: "compare_object[#{i}][name]", required: true, maxlength: "12" %>
@@ -11,19 +11,19 @@
     	<br/>
     	<div class="field">
     	<%= f.label "Reaction:" %> 
-		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/like.png" class="reaction"></div>
+		<%= f.radio_button :emoticon,"like",name: "compare_object[#{i}][emoticon]",checked:false, class: "radio like"%>
+		<img src="/assets/like.png" class="reaction like">
 		
-		<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/love.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/haha.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/wow.png" class="reaction"></div>
-		<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/sad.png" class="reaction"></div>
-		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio"%>
-		<div id="radio"><img src="/assets/angry.png" class="reaction"></div>
+		<%=f.radio_button :emoticon,"love",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio love"%>
+		<img src="/assets/love.png" class="reaction love">
+		<%=f.radio_button :emoticon,"haha",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio haha"%>
+		<img src="/assets/haha.png" class="reaction haha">
+		<%=f.radio_button :emoticon,"wow",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio wow"%>
+		<img src="/assets/wow.png" class="reaction wow">
+		<%=f.radio_button :emoticon,"sad",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio sad"%>
+		<img src="/assets/sad.png" class="reaction sad">
+		<%= f.radio_button :emoticon,"angry",name:"compare_object[#{i}][emoticon]",checked:false, class: "radio angry"%>
+		<img src="/assets/angry.png" class="reaction angry">
 		</div>
 		<br/>
 		<div class="field">	
@@ -42,27 +42,70 @@
 
 <script>
 
-	fun = function(e)
-	{
-		y = $('input[class="radio"]')
-		 count = 0;
-		for(j=0;j<y.length;j++)
-		 {
-			if(y[j].checked && this.value == y[j].value)
+	// fun = function(e)
+	// {
+	// 	y = $('input[class="radio"]')
+	// 	count = 0;
+	// 	for(j=0;j<y.length;j++)
+	// 	 {
+	// 		if(y[j].checked && this.value == y[j].value)
+	// 		{
+	// 			count++;
+	// 		}
+	// 	}
+	// 	if(count>1)
+	// 	{
+	// 		e.preventDefault();
+	// 		alert("Already Selected");
+	// 	}
+	// };
+
+	fun2 = function(e){
+		this.checked = true;
+		y = $('input[type="radio"]')
+		count = { "like": 0, "love": 0, "haha": 0, "wow": 0, "sad": 0, "angry": 0 }
+		map = { "0":"like", "1":"love", "2":"haha" , "3":"wow", "4":"sad" , "5":"angry" }
+		for(var j = 5;j<y.length;j++)
+		{
+			console.log(y[j].value)
+			if(y[j].checked)
 			{
-				count++;
+				count[y[j].value]++;
 			}
 		}
-		if(count>1)
+		size = Object.keys(count).length
+		for(j=0;j<size;j++)
 		{
-			e.preventDefault();
-			alert("Already Selected");
+			console.log(map[j])
+			console.log(count[map[j]])	
+			if(count[map[j]] > 0)
+			{
+				temp = "input[value="+map[j]+"]"
+				others = $(temp)
+				for(k=0;k<others.length;k++)
+				{
+					if(others[k].checked==false)
+					{
+						others[k].style.display = "none";
+						others[k].nextSibling.nextSibling.style.display = "none";
+					}
+				}
+			}
+			else
+			{
+				temp = "input[value="+map[j]+"]"
+				others = $(temp)
+				for(k=0;k<others.length;k++)
+				{
+					others[k].style.display = "inline";
+					others[k].nextSibling.nextSibling.style.display = "inline";
+				}	
+			}
 		}
 	};
-	x = $('input[class="radio"]')
-	for(i=0;i<x.length;i++)
+	x = $('input[type="radio"]')
+	for(i=5;i<x.length;i++)
 	{
-		temp = x[i];
-		x[i].addEventListener('click',fun)
+		x[i].addEventListener('click',fun2);
 	};
 </script>

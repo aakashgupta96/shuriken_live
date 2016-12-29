@@ -6,24 +6,21 @@
   <label for="tab2"><a href="/posts/new">Step 2</a></label>
     
   <input id="tab3" type="radio" name="tabs">
-  <label for="tab3"><a href="/posts/objects">Step 3</a></label>
+  <label for="tab3"><a href="#">Step 3</a></label>
     
   <input id="tab4" type="radio" name="tabs">
-  <label for="tab4"><a href="/posts/:id/preview">Step 4</a></label>
+  <label for="tab4"><a href="#">Step 4</a></label>
 
   <input id="tab5" type="radio" name="tabs" checked>
-  <label for="tab5"><a href="/posts/:id/preview">Step 5</a></label>
+  <label for="tab5"><a href="#">Step 5</a></label>
 
   <section id="last_step">    
     <div id="division">
-    <p id="text">We have started the streaming. You can see it on Facebook Window after 10-15 seconds. Click the 'Go Live' button as soon as it is active and <span>Click the Finish button here as well.</span></p>
+    <p id="text">We have started the streaming. You can see it on Facebook Window after 10-15 seconds. Click the 'Go Live' button as soon as it is active and then <span>Click the Finish button.</span></p>
     <%= image_tag "step_5_1.jpg" ,:class => "step_image"%>
     </div>
 
 
-    <%= link_to "FINISH",finish_path(@post.id), method: "get", class: "button"%>
+    <%= link_to "FINISH",root_path, method: "get", class: "button"%>
   </section>
-  <script>
-    alert("Do not click 'FINISH' button on next page before going LIVE on FB")
-  </script>
 </main>
