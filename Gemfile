@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'data-confirm-modal'
 gem 'devise'
 gem 'omniauth-facebook'
-
+gem 'unicorn'
 gem 'redis', '~>3.2'
 gem 'rmagick'
 gem "koala"
