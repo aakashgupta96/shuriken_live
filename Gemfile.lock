@@ -56,6 +56,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.3)
+    data-confirm-modal (1.2.0)
+      railties (>= 3.0)
     debug_inspector (0.0.2)
     devise (4.2.0)
       bcrypt (~> 3.0)
@@ -211,6 +213,7 @@ DEPENDENCIES
   byebug
   carrierwave (>= 1.0.0.rc, < 2.0)
   coffee-rails (~> 4.1.0)
+  data-confirm-modal
   devise
   jbuilder (~> 2.0)
   jquery-rails

@@ -1,0 +1,828 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+/* line 7, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main {
+  padding-top: 100px;
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  background: #fff;
+  transition: all 0.5s ease;
+}
+/* line 18, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main > label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  font-size: 30px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid transparent;
+  width: 19%;
+}
+/* line 29, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main a {
+  text-decoration: none;
+  color: #aaa;
+}
+/* line 34, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main a:hover {
+  color: #666;
+  cursor: pointer;
+}
+/* line 39, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main input[name=tabs] {
+  display: none;
+}
+/* line 44, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main input[name=tabs]:checked + label {
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+/* line 48, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main input[name=tabs]:checked + label a {
+  color: #666;
+}
+/* line 54, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #tab1:checked ~ #content1,
+main #tab2:checked ~ #content2,
+main #tab3:checked ~ #content3,
+main #tab4:checked ~ #content4,
+main #tab5:checked ~ #content5 {
+  display: block;
+}
+/* line 63, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main section {
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+/* line 68, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+/* line 74, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .aim {
+  padding: 30px 10% 30px 10%;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+/* line 82, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .aim span {
+  color: orange;
+}
+/* line 88, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard #division {
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 94, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .step_image {
+  height: 360px;
+  width: 470px;
+  margin-right: 50px;
+}
+/* line 100, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard #text {
+  width: 40%;
+  color: #4d4d4d;
+  font-size: 18px;
+  text-align: center;
+  #line-height: 35px;
+  padding-top: 50px;
+}
+/* line 109, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .stext {
+  margin-top: 100px;
+}
+/* line 113, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard #empty {
+  border: 1px solid orange;
+  margin: 20px 300px 20px 300px;
+}
+/* line 118, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .alert {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+/* line 128, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard .fb_button {
+  align-items: center;
+  background: #4267b2;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 6px;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 0 5px 1px #4268b3;
+}
+/* line 140, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #dashboard a[class="fb_button"]:hover {
+  padding: 7px;
+  font-size: 21px;
+}
+/* line 147, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main .nextpost {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+/* line 152, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main .nextpost a {
+  background-color: orange;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 1px 1px 3px 1px #cc6300;
+  transition: all 0.1s ease-out;
+}
+/* line 164, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+/* line 173, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post .field {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+/* line 180, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post label {
+  font-size: 25px;
+  width: 25%;
+  height: 30px;
+  font-weight: bolder;
+  display: inline;
+  padding: 0;
+  margin-right: 50px;
+  text-align: initial;
+}
+/* line 191, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post input[type="text"] {
+  display: block;
+  width: 50%;
+  border: none;
+  border-bottom: solid 1px #bbb;
+  transition: border 0.1s;
+}
+/* line 199, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post input[type="text"]:focus {
+  outline: none !important;
+  border-bottom: solid 2px orange;
+}
+/* line 204, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+main #new_post input[type=submit] {
+  color: white;
+  background-color: orange;
+  border-color: orange;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  font-size: 30px;
+  border-shadow: none;
+}
+
+/* line 218, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 223, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object .object {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 230, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object .object .item_head {
+  color: orange;
+  text-align: center;
+  font-size: 30px;
+  margin: 15px 0 15px 0;
+}
+/* line 238, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object .field {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+/* line 244, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object label {
+  font-size: 20px;
+  width: 25%;
+  height: 20px;
+  font-weight: bolder;
+  display: inline;
+}
+/* line 252, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object input[type="text"] {
+  display: inline;
+  width: 75%;
+  border: none;
+  border-bottom: solid 1px #bbb;
+  transition: border 0.1s;
+}
+/* line 260, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object input[type="text"]:focus {
+  outline: none !important;
+  border-bottom: solid 2px orange;
+}
+/* line 265, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object #radio {
+  color: orange;
+  display: inline;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+/* line 272, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object input[type="radio"] {
+  position: relative;
+  top: 10px;
+}
+/* line 278, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object input[type="submit"] {
+  color: white;
+  background-color: orange;
+  border-color: orange;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  font-size: 30px;
+  border-shadow: none;
+}
+/* line 289, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#new_compare_object .reaction {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+/* line 297, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#frame {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 303, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#frame h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: orange;
+  font-weight: bolder;
+}
+/* line 311, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#frame img {
+  height: 405px;
+  width: 720px;
+  margin-bottom: 10px;
+}
+/* line 317, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#frame a {
+  text-decoration: none;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+/* line 329, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+/* line 334, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step #division {
+  padding: 50px 30px 50px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 340, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step .step_image {
+  height: 360px;
+  width: 470px;
+  margin-right: 50px;
+}
+/* line 346, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step #text {
+  width: 40%;
+  color: #4d4d4d;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 100px;
+}
+/* line 354, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step span {
+  font-size: 30px;
+  color: red;
+}
+/* line 359, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+#last_step .button {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: orange;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 1px 1px 3px 1px #cc6300;
+  transition: all 0.1s ease-out;
+  margin-bottom: 50px;
+}
+
+/* line 376, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.back_image {
+  background-image: url(/assets/home-4dd25df0f7bcba2cdae132dcffd04266fd46dd4680b0a050d0f784442fb67ee3.jpg);
+  background-size: 100% 574px;
+  background-repeat: no-repeat;
+  height: 574px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+/* line 387, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.back_image .black_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin: 2% 0% 2% 50%;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 60px;
+}
+/* line 398, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.back_image .black_box p {
+  margin: 30px 30px 30px 30px;
+  font-weight: 200;
+  font-size: 34px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+}
+/* line 406, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.back_image .black_box p a {
+  text-decoration: none;
+  color: red;
+}
+
+/* line 415, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section {
+  background: white;
+  padding: 60px 0 60px 0;
+}
+/* line 419, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 48px;
+  text-align: center;
+  font-family: "Futura";
+  color: #424242;
+  margin-bottom: 60px;
+}
+/* line 430, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .content {
+  padding: 0px 24% 0px 24%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 19px;
+  color: #666666;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* line 442, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .list_head {
+  padding: 0px 18% 0px 18%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 24px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+/* line 451, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .list {
+  padding: 0 20% 0 20%;
+  list-style: square;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* line 458, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .list li {
+  width: 44%;
+  margin: 20px;
+}
+/* line 464, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .video_box {
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* line 470, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.section .video_box iframe {
+  width: 580px;
+  height: 380px;
+}
+
+/* line 479, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.grey {
+  background: #f2f2f2;
+}
+/* line 482, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.grey ul {
+  padding: 0 8% 0 10%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+/* line 489, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.grey li {
+  margin: 0 20px 0 20px;
+}
+/* line 493, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.grey .name {
+  text-align: center;
+  padding: 15px 0 15px 0;
+  font-size: 27px;
+  font-weight: 600;
+}
+/* line 500, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.grey .description {
+  padding: 15px 0 15px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* line 508, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.field {
+  margin: 10px 0 5px 0;
+  line-height: 40px;
+}
+
+/* line 513, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.select {
+  width: 70px;
+  background: white;
+  color: #555;
+  margin: 0 7px 0 7px;
+  font-size: 16px;
+  border: 0px;
+  box-shadow: 1px 1px 3px #777;
+}
+
+/* line 524, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.file_select {
+  padding: 3px 0 1px 3px;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px #777;
+}
+
+/* line 531, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.glass {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100000;
+  background-color: black;
+  opacity: 0.4;
+  height: 1000px;
+  width: 100%;
+}
+
+/* line 542, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+.form {
+  position: absolute;
+  top: 300px;
+  left: 350px;
+  background-color: white;
+  z-index: 100001;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  /* line 555, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+  label {
+    font-size: 0;
+  }
+
+  /* line 558, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 566, /home/aakash/Dropbox/WebDev/Rails/Live/app/assets/stylesheets/posts.scss */
+  label {
+    padding: 15px;
+  }
+}
+/*body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+*/
+  /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('proxima-nova-regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face{
+  font-family:"Futura";
+  src: url('futura1.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+  color:hsl(0,0%,30%);
+  font-family: Proxima Nova;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+body>header
+{
+  padding-left: 10%;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background-color: rgba(255,255,255,0.95);
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  border-width:0 0 1 0;
+  border-style: solid;
+  border-color: hsl(0,0%,95%);
+  z-index: 1000;
+}
+body
+{
+  padding-top:80px;
+}
+body>header>a>img
+{
+  margin-top:5px;
+  height:60px;
+  width:145px;
+}
+body>header>nav
+{
+  margin-right: 20%;
+}
+body>header>nav>a
+{
+  color: orange;
+  display: none;
+}
+body>header>nav>ul
+{
+  list-style: none;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body>header>nav>ul>li
+{
+  height:40px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+body>header>nav>ul>li>a
+{
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color:hsl(0,0%,40%);
+  font-weight: bolder;
+}
+body>header>nav>ul>li>div
+{
+  width: 140px;
+  height: 40px;
+  background-color: orange;
+  #box-shadow: 1px 1px 3px 1px hsl(29,100%,40%);
+}
+body>header>nav>ul>li>div>a
+{
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  height:100%;  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 900;
+  color:white;
+  transition: all 0.1s ease;
+}
+body>header>nav>ul>li>div>a:hover
+{
+  font-size: 16px;
+  box-shadow: 0 0 3px 1px orange;
+}
+body>header>nav>ul>li>a:hover
+{
+  color:orange;
+}
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+@media all and (max-width:1090px)
+{
+  body>header
+  {
+    padding-left: 0;
+  }
+  body>header>nav
+  {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 800px)
+{
+  #header
+  {
+    flex-direction: column; 
+    justify-content: space-around;
+  }
+  #header>nav>ul
+  {
+    height:0;
+    overflow: hidden;
+    transition: all 1s ease;
+  } 
+  .show
+  {
+    display:inline; 
+    position: absolute;
+    top:15px;
+    left:0px;
+    padding-left:20px;
+    font-size: 30px;
+  }
+  .show>i
+  {
+   color: orange;
+  }
+
+  #header:target .show
+  {
+   display: none;
+  }
+  #header:target > nav >ul
+  {
+   height: 80px;
+  }
+  #header:target .hide
+  {
+    display:inline;
+    position: absolute;
+    top:15px;
+    left:0px;
+    padding-left: 20px;
+    font-size : 30px;
+  }
+  #header:target .hide > i
+  {
+    color: orange;  
+  }
+  #header:target + main
+  {
+    margin-top:80px;
+  }
+}

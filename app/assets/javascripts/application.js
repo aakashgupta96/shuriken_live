@@ -15,6 +15,7 @@
 // = require jquery
 // = require jquery_ujs
 // = require_tree
+//= require data-confirm-modal
 // jQuery(document).on('turbolinks:load',function(){
 // 	jQuery("a[href^='#']").attr('data-turbolinks',false);
 

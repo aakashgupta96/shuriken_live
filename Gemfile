@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'data-confirm-modal'
 gem 'devise'
 gem 'omniauth-facebook'
 
