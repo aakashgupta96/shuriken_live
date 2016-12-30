@@ -4,9 +4,8 @@ require "rmagick"
 require 'koala'
 # Initialize the Rails application.
 
-Rails.application.initialize!
-
 require 'carrierwave/orm/activerecord'
 require 'frame'
-require "RMagick"
-#Resque.enqueue(StopStream)
+
+Rails.application.initialize!
+
