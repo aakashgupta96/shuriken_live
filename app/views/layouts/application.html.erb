@@ -23,23 +23,6 @@
   <div class="alert"><%#=alert %></div>
 <% end %>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '241493676272963',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/all.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 <%# if user_signed_in? %>
   <%#= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
 <%# else %>
@@ -64,6 +47,47 @@
 </header>
 
 <%= yield %>
+
+
+<footer id= "footer">
+      <ul class="people">
+            <p> DEVELOPED BY: </p>
+               <div><li> Aakash Gupta </li></div>
+               <div><li> Apoorva Sharma</li></div>
+      </ul>
+            <br><br>
+      <ul class="people">
+            <p>GUIDED BY:</p>
+                <div><li>Ankush Singla</li></div>
+                <div><li>Tushar Tuteja </li></div>
+      </ul> 
+
+      <div class = "people">
+            <p> CONTACT US: </p>
+            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@codingninjas.in</div>
+            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>aakash.gupta96@yahoo.in</div>
+            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>apoorva.11596@gmail.com</div>
+      </div> 
+</footer>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '241493676272963',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
   
 </body>
 </html>

@@ -134,6 +134,49 @@ p {
   line-height: 1.5;
 }
 
+body > footer{
+     padding-top: 30px;
+     background-color: black;
+     display:flex;
+     flex-direction:row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+  }
+
+  .people{
+      padding-top: 60px;
+      list-style:none;
+      padding-bottom: 90px;
+      padding-right : 30px;
+      margin : 0 auto;
+  }
+
+  .people > p{
+    color: orange;
+    font-size: 30px;
+  }
+  .people > div > li{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .people > div{
+    display: flex;
+    flex-wrap: wrap;
+    color:white;
+    align-items:center;
+    padding-bottom: 20px;
+  }
+
+  .people > div > i{
+    font-size: 25px;
+    color : green;
+    padding-right: 10px;
+  }
+
+  
+
 @media all and (max-width:1090px)
 {
   body>header
@@ -197,4 +240,5 @@ p {
   {
     margin-top:80px;
   }
+
 }
