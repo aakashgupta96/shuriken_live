@@ -73,7 +73,7 @@ class UpdateFrame
       
       frame.write("public/uploads/post/#{post.id}/frame2.tmp.png")
       %x[mv "public/uploads/post/#{post.id}/frame2.tmp.png" "public/uploads/post/#{post.id}/frame2.png"]
-      sleep(1.5)
+      sleep(1.2)
       rescue
         error = error + 1
         if(error<count)
