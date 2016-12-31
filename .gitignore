@@ -15,6 +15,7 @@
 /config/database.yml
 /config/local_env.yml
 /public/assets
+/db/schema.rb
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
