@@ -3,7 +3,7 @@ class EditorController < ApplicationController
 	include Magick
 
   def testFrame
-    post = Post.find(295)
+    post = Post.last
     
     txt = Draw.new
     txt.pointsize = 30
