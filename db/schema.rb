@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161230165742) do
+ActiveRecord::Schema.define(version: 20161227090846) do
 
   create_table "compare_objects", force: :cascade do |t|
     t.string   "name"
