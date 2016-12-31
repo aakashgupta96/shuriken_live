@@ -50,9 +50,14 @@ class PostsController < ApplicationController
   end
 
 
-  def publish
+  def publish 
+    if workers_available? 
       Resque.enqueue(StartStream,@post.id)
-      Resque.enqueue(UpdateFrame,@post.id,(((@post.duration - 30.years).to_i)/2)+20)
+      Resque.enqueue(UpdateFrame,@post.id)
+    else
+      redirect_to root_path, alert: "Sorry! Can't process you request"
+      return
+    end
   end
 
   # POST /posts
@@ -105,6 +110,27 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
+    def workers_available?
+      start = 0
+      update = 0
+      Resque::Worker.all.each do |worker|
+        
+        unless worker.working?
+          if worker.queues.first == "start_stream"
+            start = 1
+          elsif worker.queues.first == "update_frame"
+            update = 1
+          end
+        end
+
+        if start==1 and update==1
+          return true
+        end
+      end
+      return false
+    end
+
     def set_post
       @post = Post.find_by_id(params[:id]) 
       if @post.nil?
