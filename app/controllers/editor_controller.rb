@@ -1,6 +1,5 @@
 class EditorController < ApplicationController
 	
-	require "rmagick"
 	include Magick
 
   def testFrame
