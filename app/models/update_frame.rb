@@ -87,6 +87,7 @@ class UpdateFrame
         #end
      end
   end
+end
 
   def self.retrieve x,reactions
     count = 0;
