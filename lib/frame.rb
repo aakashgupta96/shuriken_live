@@ -295,6 +295,7 @@ module Frame
 	    end
 
 	    frame.write("public/uploads/post/#{post.id}/frame2.png")
-	    frame.write("app/assets/images/#{post.id}_frame.png")
+	    frame.write("public/images/#{post.id}_frame.png")
+	    #frame.write("app/assets/images/#{post.id}_frame.png")
  	end
 end
