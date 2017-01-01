@@ -7,4 +7,3 @@ require 'frame'
 Rails.application.initialize!
 
 #Resque.enqueue(StopStream)
-

@@ -85,8 +85,7 @@ class UpdateFrame
         #else
          # return
         #end
-      end
-    end
+     end
   end
 
   def self.retrieve x,reactions
