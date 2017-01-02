@@ -29,9 +29,8 @@ Rails.application.configure do
 
   #Uncomment first line and remove 2nd and 3rd after setting nginx and unicorn
 
- # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?  
+  #config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?  
   config.serve_static_files = true
-  config.serve_static_assets = true
 
 
 
