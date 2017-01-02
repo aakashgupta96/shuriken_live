@@ -9,16 +9,18 @@ class UpdateFrame
     @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
     #error = 0
     #count = count + 525
+    txt = Draw.new
+    txt.pointsize = 30
+    txt.stroke = "black"
+    txt.fill = "white"
+    txt.font_weight = Magick::BoldWeight
+     
     loop do 
       
     begin
+      
       reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
-      txt = Draw.new
-      txt.pointsize = 30
-      txt.stroke = "black"
-      txt.fill = "white"
-      txt.font_weight = Magick::BoldWeight
-     
+      
       if post.comparisons == 2
         obj1 = UpdateFrame.retrieve(post.compare_objects[0].emoticon,reactions)
         obj2 = UpdateFrame.retrieve(post.compare_objects[1].emoticon,reactions)
