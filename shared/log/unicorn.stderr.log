@@ -1,0 +1,371 @@
+I, [2017-01-02T09:32:28.757347 #22749]  INFO -- : Refreshing Gem list
+I, [2017-01-02T09:32:31.795149 #22749]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T09:32:31.795463 #22749]  INFO -- : worker=0 spawning...
+I, [2017-01-02T09:32:31.801040 #22749]  INFO -- : worker=1 spawning...
+I, [2017-01-02T09:32:31.802475 #22754]  INFO -- : worker=0 spawned pid=22754
+I, [2017-01-02T09:32:31.802676 #22754]  INFO -- : worker=0 ready
+I, [2017-01-02T09:32:31.805085 #22749]  INFO -- : master process ready
+I, [2017-01-02T09:32:31.812227 #22757]  INFO -- : worker=1 spawned pid=22757
+I, [2017-01-02T09:32:31.812423 #22757]  INFO -- : worker=1 ready
+I, [2017-01-02T09:53:24.587639 #22749]  INFO -- : reaped #<Process::Status: pid 22754 exit 0> worker=0
+I, [2017-01-02T09:53:24.588303 #22749]  INFO -- : reaped #<Process::Status: pid 22757 exit 0> worker=1
+I, [2017-01-02T09:53:24.588706 #22749]  INFO -- : master complete
+I, [2017-01-02T09:54:17.284957 #1810]  INFO -- : Refreshing Gem list
+I, [2017-01-02T09:54:20.353465 #1810]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T09:54:20.353959 #1810]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T09:54:20.354163 #1810]  INFO -- : worker=0 spawning...
+I, [2017-01-02T09:54:20.357834 #1810]  INFO -- : worker=1 spawning...
+I, [2017-01-02T09:54:20.359853 #1810]  INFO -- : master process ready
+I, [2017-01-02T09:54:20.366060 #1815]  INFO -- : worker=0 spawned pid=1815
+I, [2017-01-02T09:54:20.366321 #1815]  INFO -- : worker=0 ready
+I, [2017-01-02T09:54:20.367759 #1817]  INFO -- : worker=1 spawned pid=1817
+I, [2017-01-02T09:54:20.367961 #1817]  INFO -- : worker=1 ready
+I, [2017-01-02T09:54:23.088306 #1810]  INFO -- : reaped #<Process::Status: pid 1815 exit 0> worker=0
+I, [2017-01-02T09:54:23.088485 #1810]  INFO -- : reaped #<Process::Status: pid 1817 exit 0> worker=1
+I, [2017-01-02T09:54:23.088569 #1810]  INFO -- : master complete
+I, [2017-01-02T09:54:26.751412 #1994]  INFO -- : Refreshing Gem list
+I, [2017-01-02T09:54:29.025092 #1994]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T09:54:29.025306 #1994]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T09:54:29.025441 #1994]  INFO -- : worker=0 spawning...
+I, [2017-01-02T09:54:29.027106 #1994]  INFO -- : worker=1 spawning...
+I, [2017-01-02T09:54:29.028102 #1997]  INFO -- : worker=0 spawned pid=1997
+I, [2017-01-02T09:54:29.028292 #1997]  INFO -- : worker=0 ready
+I, [2017-01-02T09:54:29.030063 #1994]  INFO -- : master process ready
+I, [2017-01-02T09:54:29.037787 #2000]  INFO -- : worker=1 spawned pid=2000
+I, [2017-01-02T09:54:29.037971 #2000]  INFO -- : worker=1 ready
+I, [2017-01-02T09:59:27.445584 #1994]  INFO -- : reaped #<Process::Status: pid 1997 exit 0> worker=0
+I, [2017-01-02T09:59:27.445858 #1994]  INFO -- : reaped #<Process::Status: pid 2000 exit 0> worker=1
+I, [2017-01-02T09:59:27.445949 #1994]  INFO -- : master complete
+I, [2017-01-02T09:59:31.155821 #2524]  INFO -- : Refreshing Gem list
+I, [2017-01-02T09:59:33.511220 #2524]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T09:59:33.511446 #2524]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T09:59:33.511595 #2524]  INFO -- : worker=0 spawning...
+I, [2017-01-02T09:59:33.513058 #2524]  INFO -- : worker=1 spawning...
+I, [2017-01-02T09:59:33.514196 #2524]  INFO -- : master process ready
+I, [2017-01-02T09:59:33.521439 #2527]  INFO -- : worker=0 spawned pid=2527
+I, [2017-01-02T09:59:33.521671 #2527]  INFO -- : worker=0 ready
+I, [2017-01-02T09:59:33.522701 #2529]  INFO -- : worker=1 spawned pid=2529
+I, [2017-01-02T09:59:33.522878 #2529]  INFO -- : worker=1 ready
+I, [2017-01-02T10:20:05.206080 #2524]  INFO -- : reaped #<Process::Status: pid 2527 exit 0> worker=0
+I, [2017-01-02T10:20:05.206413 #2524]  INFO -- : reaped #<Process::Status: pid 2529 exit 0> worker=1
+I, [2017-01-02T10:20:05.206594 #2524]  INFO -- : master complete
+I, [2017-01-02T10:20:10.167469 #3355]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:20:12.370704 #3355]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T10:20:12.370907 #3355]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T10:20:12.371033 #3355]  INFO -- : worker=0 spawning...
+I, [2017-01-02T10:20:12.372309 #3355]  INFO -- : worker=1 spawning...
+I, [2017-01-02T10:20:12.373679 #3355]  INFO -- : master process ready
+I, [2017-01-02T10:20:12.379950 #3358]  INFO -- : worker=0 spawned pid=3358
+I, [2017-01-02T10:20:12.380148 #3358]  INFO -- : worker=0 ready
+I, [2017-01-02T10:20:12.381103 #3361]  INFO -- : worker=1 spawned pid=3361
+I, [2017-01-02T10:20:12.381289 #3361]  INFO -- : worker=1 ready
+I, [2017-01-02T10:29:17.436386 #3355]  INFO -- : reaped #<Process::Status: pid 3358 exit 0> worker=0
+I, [2017-01-02T10:29:17.436611 #3355]  INFO -- : reaped #<Process::Status: pid 3361 exit 0> worker=1
+I, [2017-01-02T10:29:17.436737 #3355]  INFO -- : master complete
+I, [2017-01-02T10:29:44.771445 #4282]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:29:46.987331 #4282]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T10:29:46.987548 #4282]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T10:29:46.987686 #4282]  INFO -- : worker=0 spawning...
+I, [2017-01-02T10:29:46.989081 #4282]  INFO -- : worker=1 spawning...
+I, [2017-01-02T10:29:46.990344 #4282]  INFO -- : master process ready
+I, [2017-01-02T10:29:46.997203 #4285]  INFO -- : worker=0 spawned pid=4285
+I, [2017-01-02T10:29:46.997407 #4285]  INFO -- : worker=0 ready
+I, [2017-01-02T10:29:46.998353 #4287]  INFO -- : worker=1 spawned pid=4287
+I, [2017-01-02T10:29:46.998518 #4287]  INFO -- : worker=1 ready
+I, [2017-01-02T10:36:35.526631 #4282]  INFO -- : reaped #<Process::Status: pid 4285 exit 0> worker=0
+I, [2017-01-02T10:36:35.526933 #4282]  INFO -- : reaped #<Process::Status: pid 4287 exit 0> worker=1
+I, [2017-01-02T10:36:35.527047 #4282]  INFO -- : master complete
+I, [2017-01-02T10:36:59.487791 #5094]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:37:01.975133 #5094]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T10:37:01.975418 #5094]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T10:37:01.975599 #5094]  INFO -- : worker=0 spawning...
+I, [2017-01-02T10:37:01.977632 #5094]  INFO -- : worker=1 spawning...
+I, [2017-01-02T10:37:01.979370 #5094]  INFO -- : master process ready
+I, [2017-01-02T10:37:01.986190 #5097]  INFO -- : worker=0 spawned pid=5097
+I, [2017-01-02T10:37:01.986462 #5097]  INFO -- : worker=0 ready
+I, [2017-01-02T10:37:01.987821 #5099]  INFO -- : worker=1 spawned pid=5099
+I, [2017-01-02T10:37:01.988060 #5099]  INFO -- : worker=1 ready
+I, [2017-01-02T10:39:32.841538 #5094]  INFO -- : reloading config_file=config/unicorn.rb
+I, [2017-01-02T10:39:33.093831 #5094]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:39:33.106772 #5094]  INFO -- : done reloading config_file=config/unicorn.rb
+I, [2017-01-02T10:39:33.106954 #5094]  INFO -- : reaped #<Process::Status: pid 5097 exit 0> worker=0
+I, [2017-01-02T10:39:33.107020 #5094]  INFO -- : reaped #<Process::Status: pid 5099 exit 0> worker=1
+I, [2017-01-02T10:39:33.107198 #5094]  INFO -- : master complete
+I, [2017-01-02T10:40:28.551259 #1982]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:40:28.552773 #1987]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:40:34.646181 #1982]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T10:40:34.646887 #1982]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T10:40:34.647256 #1982]  INFO -- : worker=0 spawning...
+E, [2017-01-02T10:40:34.647684 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+E, [2017-01-02T10:40:34.647834 #1987] ERROR -- : retrying in 0.5 seconds (4 tries left)
+I, [2017-01-02T10:40:34.657618 #1982]  INFO -- : worker=1 spawning...
+I, [2017-01-02T10:40:34.660087 #1991]  INFO -- : worker=0 spawned pid=1991
+I, [2017-01-02T10:40:34.660415 #1991]  INFO -- : worker=0 ready
+I, [2017-01-02T10:40:34.665056 #1982]  INFO -- : master process ready
+I, [2017-01-02T10:40:34.671167 #1994]  INFO -- : worker=1 spawned pid=1994
+I, [2017-01-02T10:40:34.671396 #1994]  INFO -- : worker=1 ready
+E, [2017-01-02T10:40:35.148268 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+E, [2017-01-02T10:40:35.148379 #1987] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2017-01-02T10:40:35.648801 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+E, [2017-01-02T10:40:35.648966 #1987] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2017-01-02T10:40:36.149434 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+E, [2017-01-02T10:40:36.149598 #1987] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2017-01-02T10:40:36.650043 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+E, [2017-01-02T10:40:36.650158 #1987] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2017-01-02T10:40:37.150540 #1987] ERROR -- : adding listener failed addr=/root/shuriken_live/shared/sockets/unicorn.sock (in use)
+Errno::EADDRINUSE: Address already in use - connect(2) for /root/shuriken_live/shared/sockets/unicorn.sock
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-02T10:42:11.976303 #1982]  INFO -- : reaped #<Process::Status: pid 1991 exit 0> worker=0
+I, [2017-01-02T10:42:11.976487 #1982]  INFO -- : reaped #<Process::Status: pid 1994 exit 0> worker=1
+I, [2017-01-02T10:42:11.976576 #1982]  INFO -- : master complete
+I, [2017-01-02T10:43:35.762301 #3289]  INFO -- : Refreshing Gem list
+I, [2017-01-02T10:43:38.174772 #3289]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T10:43:38.174998 #3289]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T10:43:38.175145 #3289]  INFO -- : worker=0 spawning...
+I, [2017-01-02T10:43:38.177400 #3289]  INFO -- : worker=1 spawning...
+I, [2017-01-02T10:43:38.178629 #3294]  INFO -- : worker=0 spawned pid=3294
+I, [2017-01-02T10:43:38.178855 #3294]  INFO -- : worker=0 ready
+I, [2017-01-02T10:43:38.181251 #3289]  INFO -- : master process ready
+I, [2017-01-02T10:43:38.189191 #3297]  INFO -- : worker=1 spawned pid=3297
+I, [2017-01-02T10:43:38.189461 #3297]  INFO -- : worker=1 ready
+I, [2017-01-02T11:01:30.089462 #3289]  INFO -- : reaped #<Process::Status: pid 3294 exit 0> worker=0
+I, [2017-01-02T11:01:30.089939 #3289]  INFO -- : reaped #<Process::Status: pid 3297 exit 0> worker=1
+I, [2017-01-02T11:01:30.090066 #3289]  INFO -- : master complete
+I, [2017-01-02T11:01:33.728703 #4518]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:01:36.025503 #4518]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:01:36.025713 #4518]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:01:36.025845 #4518]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:01:36.027665 #4518]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:01:36.028566 #4523]  INFO -- : worker=0 spawned pid=4523
+I, [2017-01-02T11:01:36.028733 #4523]  INFO -- : worker=0 ready
+I, [2017-01-02T11:01:36.030116 #4518]  INFO -- : master process ready
+I, [2017-01-02T11:01:36.037798 #4526]  INFO -- : worker=1 spawned pid=4526
+I, [2017-01-02T11:01:36.038087 #4526]  INFO -- : worker=1 ready
+I, [2017-01-02T11:11:15.318890 #4518]  INFO -- : reaped #<Process::Status: pid 4523 exit 0> worker=0
+I, [2017-01-02T11:11:15.319185 #4518]  INFO -- : reaped #<Process::Status: pid 4526 exit 0> worker=1
+I, [2017-01-02T11:11:15.319297 #4518]  INFO -- : master complete
+I, [2017-01-02T11:11:18.576654 #5621]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:11:20.823925 #5621]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:11:20.824148 #5621]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:11:20.824282 #5621]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:11:20.826137 #5621]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:11:20.827363 #5621]  INFO -- : master process ready
+I, [2017-01-02T11:11:20.834345 #5624]  INFO -- : worker=0 spawned pid=5624
+I, [2017-01-02T11:11:20.834547 #5624]  INFO -- : worker=0 ready
+I, [2017-01-02T11:11:20.835430 #5626]  INFO -- : worker=1 spawned pid=5626
+I, [2017-01-02T11:11:20.835577 #5626]  INFO -- : worker=1 ready
+I, [2017-01-02T11:14:35.851528 #5621]  INFO -- : reaped #<Process::Status: pid 5624 exit 0> worker=0
+I, [2017-01-02T11:14:35.851874 #5621]  INFO -- : reaped #<Process::Status: pid 5626 exit 0> worker=1
+I, [2017-01-02T11:14:35.851971 #5621]  INFO -- : master complete
+I, [2017-01-02T11:14:39.856693 #6309]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:14:42.093260 #6309]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:14:42.093529 #6309]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:14:42.093686 #6309]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:14:42.095427 #6309]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:14:42.096569 #6312]  INFO -- : worker=0 spawned pid=6312
+I, [2017-01-02T11:14:42.096761 #6312]  INFO -- : worker=0 ready
+I, [2017-01-02T11:14:42.098328 #6309]  INFO -- : master process ready
+I, [2017-01-02T11:14:42.106851 #6315]  INFO -- : worker=1 spawned pid=6315
+I, [2017-01-02T11:14:42.107070 #6315]  INFO -- : worker=1 ready
+I, [2017-01-02T11:15:07.532248 #6309]  INFO -- : reaped #<Process::Status: pid 6312 exit 0> worker=0
+I, [2017-01-02T11:15:07.532397 #6309]  INFO -- : reaped #<Process::Status: pid 6315 exit 0> worker=1
+I, [2017-01-02T11:15:07.532519 #6309]  INFO -- : master complete
+I, [2017-01-02T11:15:58.424043 #2941]  INFO -- : Refreshing Gem list
+ArgumentError: Already running on PID:2941 (or pid=/root/shuriken_live/shared/pids/unicorn.pid is stale)
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-02T11:16:02.223580 #2941]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:16:02.223920 #2941]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:16:02.224107 #2941]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:16:02.226656 #2941]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:16:02.227925 #2961]  INFO -- : worker=0 spawned pid=2961
+I, [2017-01-02T11:16:02.228163 #2961]  INFO -- : worker=0 ready
+I, [2017-01-02T11:16:02.230272 #2941]  INFO -- : master process ready
+I, [2017-01-02T11:16:02.239217 #2964]  INFO -- : worker=1 spawned pid=2964
+I, [2017-01-02T11:16:02.239400 #2964]  INFO -- : worker=1 ready
+I, [2017-01-02T11:18:46.052043 #2941]  INFO -- : reaped #<Process::Status: pid 2961 exit 0> worker=0
+I, [2017-01-02T11:18:46.052321 #2941]  INFO -- : reaped #<Process::Status: pid 2964 exit 0> worker=1
+I, [2017-01-02T11:18:46.052466 #2941]  INFO -- : master complete
+I, [2017-01-02T11:18:52.421447 #3640]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:18:54.752515 #3640]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:18:54.752727 #3640]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:18:54.752871 #3640]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:18:54.754728 #3640]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:18:54.755901 #3643]  INFO -- : worker=0 spawned pid=3643
+I, [2017-01-02T11:18:54.756111 #3643]  INFO -- : worker=0 ready
+I, [2017-01-02T11:18:54.757753 #3640]  INFO -- : master process ready
+I, [2017-01-02T11:18:54.765628 #3646]  INFO -- : worker=1 spawned pid=3646
+I, [2017-01-02T11:18:54.765844 #3646]  INFO -- : worker=1 ready
+I, [2017-01-02T11:27:09.784067 #3640]  INFO -- : reaped #<Process::Status: pid 3643 exit 0> worker=0
+I, [2017-01-02T11:27:09.784334 #3640]  INFO -- : reaped #<Process::Status: pid 3646 exit 0> worker=1
+I, [2017-01-02T11:27:09.784448 #3640]  INFO -- : master complete
+I, [2017-01-02T11:27:18.885311 #4087]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:27:21.365919 #4087]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:27:21.366558 #4087]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:27:21.366860 #4087]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:27:21.368746 #4087]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:27:21.369997 #4091]  INFO -- : worker=0 spawned pid=4091
+I, [2017-01-02T11:27:21.370189 #4091]  INFO -- : worker=0 ready
+I, [2017-01-02T11:27:21.371501 #4087]  INFO -- : master process ready
+I, [2017-01-02T11:27:21.379379 #4094]  INFO -- : worker=1 spawned pid=4094
+I, [2017-01-02T11:27:21.379553 #4094]  INFO -- : worker=1 ready
+I, [2017-01-02T11:33:35.295991 #4087]  INFO -- : reaped #<Process::Status: pid 4091 exit 0> worker=0
+I, [2017-01-02T11:33:35.296360 #4087]  INFO -- : reaped #<Process::Status: pid 4094 exit 0> worker=1
+I, [2017-01-02T11:33:35.296462 #4087]  INFO -- : master complete
+I, [2017-01-02T11:34:02.777205 #5794]  INFO -- : Refreshing Gem list
+I, [2017-01-02T11:34:05.158193 #5794]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T11:34:05.158433 #5794]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T11:34:05.158606 #5794]  INFO -- : worker=0 spawning...
+I, [2017-01-02T11:34:05.160177 #5794]  INFO -- : worker=1 spawning...
+I, [2017-01-02T11:34:05.161125 #5797]  INFO -- : worker=0 spawned pid=5797
+I, [2017-01-02T11:34:05.161318 #5797]  INFO -- : worker=0 ready
+I, [2017-01-02T11:34:05.162747 #5794]  INFO -- : master process ready
+I, [2017-01-02T11:34:05.170846 #5800]  INFO -- : worker=1 spawned pid=5800
+I, [2017-01-02T11:34:05.171070 #5800]  INFO -- : worker=1 ready
+I, [2017-01-02T12:10:23.636387 #5794]  INFO -- : reaped #<Process::Status: pid 5797 exit 0> worker=0
+I, [2017-01-02T12:10:23.636670 #5794]  INFO -- : reaped #<Process::Status: pid 5800 exit 0> worker=1
+I, [2017-01-02T12:10:23.636802 #5794]  INFO -- : master complete
+I, [2017-01-02T12:10:27.277420 #6989]  INFO -- : Refreshing Gem list
+I, [2017-01-02T12:10:29.553799 #6989]  INFO -- : listening on addr=/tmp/unicorn.sock fd=8
+I, [2017-01-02T12:10:29.553975 #6989]  INFO -- : worker=0 spawning...
+I, [2017-01-02T12:10:29.555517 #6989]  INFO -- : worker=1 spawning...
+I, [2017-01-02T12:10:29.556977 #6989]  INFO -- : master process ready
+I, [2017-01-02T12:10:29.563545 #6992]  INFO -- : worker=0 spawned pid=6992
+I, [2017-01-02T12:10:29.563751 #6992]  INFO -- : worker=0 ready
+I, [2017-01-02T12:10:29.564760 #6994]  INFO -- : worker=1 spawned pid=6994
+I, [2017-01-02T12:10:29.564919 #6994]  INFO -- : worker=1 ready
+I, [2017-01-02T12:14:45.155386 #6989]  INFO -- : reaped #<Process::Status: pid 6992 exit 0> worker=0
+I, [2017-01-02T12:14:45.155821 #6989]  INFO -- : reaped #<Process::Status: pid 6994 exit 0> worker=1
+I, [2017-01-02T12:14:45.155945 #6989]  INFO -- : master complete
+I, [2017-01-02T12:14:48.797028 #7339]  INFO -- : Refreshing Gem list
+I, [2017-01-02T12:14:51.406742 #7339]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
+I, [2017-01-02T12:14:51.406953 #7339]  INFO -- : listening on addr=/tmp/unicorn.sock fd=8
+I, [2017-01-02T12:14:51.407085 #7339]  INFO -- : worker=0 spawning...
+I, [2017-01-02T12:14:51.408543 #7339]  INFO -- : worker=1 spawning...
+I, [2017-01-02T12:14:51.409589 #7342]  INFO -- : worker=0 spawned pid=7342
+I, [2017-01-02T12:14:51.409760 #7342]  INFO -- : worker=0 ready
+I, [2017-01-02T12:14:51.411405 #7339]  INFO -- : master process ready
+I, [2017-01-02T12:14:51.418923 #7345]  INFO -- : worker=1 spawned pid=7345
+I, [2017-01-02T12:14:51.419141 #7345]  INFO -- : worker=1 ready
+I, [2017-01-02T12:21:27.727867 #7339]  INFO -- : reaped #<Process::Status: pid 7342 exit 0> worker=0
+I, [2017-01-02T12:21:27.728079 #7339]  INFO -- : reaped #<Process::Status: pid 7345 exit 0> worker=1
+I, [2017-01-02T12:21:27.728164 #7339]  INFO -- : master complete
+I, [2017-01-02T12:21:34.773119 #7613]  INFO -- : Refreshing Gem list
+I, [2017-01-02T12:21:37.121101 #7613]  INFO -- : unlinking existing socket=/root/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-02T12:21:37.121319 #7613]  INFO -- : listening on addr=/root/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-02T12:21:37.121450 #7613]  INFO -- : worker=0 spawning...
+I, [2017-01-02T12:21:37.122896 #7613]  INFO -- : worker=1 spawning...
+I, [2017-01-02T12:21:37.124055 #7613]  INFO -- : master process ready
+I, [2017-01-02T12:21:37.131139 #7616]  INFO -- : worker=0 spawned pid=7616
+I, [2017-01-02T12:21:37.131351 #7616]  INFO -- : worker=0 ready
+I, [2017-01-02T12:21:37.132357 #7618]  INFO -- : worker=1 spawned pid=7618
+I, [2017-01-02T12:21:37.132531 #7618]  INFO -- : worker=1 ready
+I, [2017-01-02T12:55:16.388900 #7613]  INFO -- : reaped #<Process::Status: pid 7616 exit 0> worker=0
+I, [2017-01-02T12:55:16.389367 #7613]  INFO -- : reaped #<Process::Status: pid 7618 exit 0> worker=1
+I, [2017-01-02T12:55:16.389686 #7613]  INFO -- : master complete
+I, [2017-01-02T12:56:06.404454 #2342]  INFO -- : Refreshing Gem list
+F, [2017-01-02T12:56:09.592712 #2342] FATAL -- : error adding listener addr=/var/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /var/sockets/unicorn.sock
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-02T12:57:39.783770 #2470]  INFO -- : Refreshing Gem list
+F, [2017-01-02T12:57:42.184700 #2470] FATAL -- : error adding listener addr=/var/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /var/sockets/unicorn.sock
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-02T12:57:49.275124 #2573]  INFO -- : Refreshing Gem list
+F, [2017-01-02T12:57:51.575059 #2573] FATAL -- : error adding listener addr=/var/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /var/sockets/unicorn.sock
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /root/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `load'
+  /root/.rbenv/versions/2.3.0/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-02T12:59:48.910727 #2783]  INFO -- : Refreshing Gem list
+I, [2017-01-02T12:59:51.058364 #2783]  INFO -- : listening on addr=/var/sockets/unicorn.sock fd=8
+I, [2017-01-02T12:59:51.058700 #2783]  INFO -- : worker=0 spawning...
+I, [2017-01-02T12:59:51.060733 #2783]  INFO -- : worker=1 spawning...
+I, [2017-01-02T12:59:51.063714 #2783]  INFO -- : master process ready
+I, [2017-01-02T12:59:51.065208 #2786]  INFO -- : worker=0 spawned pid=2786
+I, [2017-01-02T12:59:51.072193 #2786]  INFO -- : worker=0 ready
+I, [2017-01-02T12:59:51.072894 #2788]  INFO -- : worker=1 spawned pid=2788
+I, [2017-01-02T12:59:51.073227 #2788]  INFO -- : worker=1 ready
+I, [2017-01-02T13:31:31.072477 #2783]  INFO -- : reaped #<Process::Status: pid 2786 exit 0> worker=0
+I, [2017-01-02T13:31:31.072887 #2783]  INFO -- : reaped #<Process::Status: pid 2788 exit 0> worker=1
+I, [2017-01-02T13:31:31.073233 #2783]  INFO -- : master complete
+I, [2017-01-02T13:32:44.120738 #2368]  INFO -- : Refreshing Gem list
+I, [2017-01-02T13:32:47.028754 #2368]  INFO -- : unlinking existing socket=/var/sockets/unicorn.sock
+I, [2017-01-02T13:32:47.029293 #2368]  INFO -- : listening on addr=/var/sockets/unicorn.sock fd=8
+I, [2017-01-02T13:32:47.029531 #2368]  INFO -- : worker=0 spawning...
+I, [2017-01-02T13:32:47.035341 #2368]  INFO -- : worker=1 spawning...
+I, [2017-01-02T13:32:47.037607 #2373]  INFO -- : worker=0 spawned pid=2373
+I, [2017-01-02T13:32:47.037895 #2373]  INFO -- : worker=0 ready
+I, [2017-01-02T13:32:47.041438 #2368]  INFO -- : master process ready
+I, [2017-01-02T13:32:47.050351 #2376]  INFO -- : worker=1 spawned pid=2376
+I, [2017-01-02T13:32:47.050624 #2376]  INFO -- : worker=1 ready
+I, [2017-01-02T13:59:22.701990 #2368]  INFO -- : reaped #<Process::Status: pid 2373 exit 0> worker=0
+I, [2017-01-02T13:59:22.704773 #2368]  INFO -- : reaped #<Process::Status: pid 2376 exit 0> worker=1
+I, [2017-01-02T13:59:22.705494 #2368]  INFO -- : master complete
+I, [2017-01-02T13:59:35.991636 #6297]  INFO -- : Refreshing Gem list
+I, [2017-01-02T13:59:38.811277 #6297]  INFO -- : unlinking existing socket=/var/sockets/unicorn.sock
+I, [2017-01-02T13:59:38.811825 #6297]  INFO -- : listening on addr=/var/sockets/unicorn.sock fd=8
+I, [2017-01-02T13:59:38.812064 #6297]  INFO -- : worker=0 spawning...
+I, [2017-01-02T13:59:38.819832 #6297]  INFO -- : worker=1 spawning...
+I, [2017-01-02T13:59:38.821453 #6300]  INFO -- : worker=0 spawned pid=6300
+I, [2017-01-02T13:59:38.821706 #6300]  INFO -- : worker=0 ready
+I, [2017-01-02T13:59:38.824754 #6297]  INFO -- : master process ready
+I, [2017-01-02T13:59:38.829815 #6303]  INFO -- : worker=1 spawned pid=6303
+I, [2017-01-02T13:59:38.830010 #6303]  INFO -- : worker=1 ready
+I, [2017-01-02T14:31:08.136871 #6297]  INFO -- : reloading config_file=config/unicorn.rb
+I, [2017-01-02T14:31:09.401666 #6297]  INFO -- : Refreshing Gem list
+I, [2017-01-02T14:31:09.416020 #6297]  INFO -- : done reloading config_file=config/unicorn.rb
+I, [2017-01-02T14:31:09.416327 #6297]  INFO -- : reaped #<Process::Status: pid 6300 exit 0> worker=0
+I, [2017-01-02T14:31:09.416431 #6297]  INFO -- : reaped #<Process::Status: pid 6303 exit 0> worker=1
+I, [2017-01-02T14:31:09.419971 #6297]  INFO -- : master complete
+I, [2017-01-02T14:34:56.033288 #2577]  INFO -- : Refreshing Gem list
+I, [2017-01-02T14:34:58.812865 #2577]  INFO -- : unlinking existing socket=/var/sockets/unicorn.sock
+I, [2017-01-02T14:34:58.814383 #2577]  INFO -- : listening on addr=/var/sockets/unicorn.sock fd=8
+I, [2017-01-02T14:34:58.814569 #2577]  INFO -- : worker=0 spawning...
+I, [2017-01-02T14:34:58.816647 #2577]  INFO -- : worker=1 spawning...
+I, [2017-01-02T14:34:58.817757 #2580]  INFO -- : worker=0 spawned pid=2580
+I, [2017-01-02T14:34:58.817963 #2580]  INFO -- : worker=0 ready
+I, [2017-01-02T14:34:58.819875 #2577]  INFO -- : master process ready
+I, [2017-01-02T14:34:58.827306 #2583]  INFO -- : worker=1 spawned pid=2583
+I, [2017-01-02T14:34:58.827486 #2583]  INFO -- : worker=1 ready
