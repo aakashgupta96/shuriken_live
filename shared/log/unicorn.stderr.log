@@ -369,3 +369,20 @@ I, [2017-01-02T14:34:58.817963 #2580]  INFO -- : worker=0 ready
 I, [2017-01-02T14:34:58.819875 #2577]  INFO -- : master process ready
 I, [2017-01-02T14:34:58.827306 #2583]  INFO -- : worker=1 spawned pid=2583
 I, [2017-01-02T14:34:58.827486 #2583]  INFO -- : worker=1 ready
+E, [2017-01-03T19:04:55.126170 #2577] ERROR -- : reaped #<Process::Status: pid 2583 SIGKILL (signal 9)> worker=1
+I, [2017-01-03T19:04:55.403677 #2577]  INFO -- : worker=1 spawning...
+I, [2017-01-03T19:04:55.486769 #12321]  INFO -- : worker=1 spawned pid=12321
+I, [2017-01-03T19:04:55.495513 #12321]  INFO -- : worker=1 ready
+I, [2017-01-03T19:21:42.757197 #2577]  INFO -- : reaped #<Process::Status: pid 2580 exit 0> worker=0
+I, [2017-01-03T19:21:43.498367 #2577]  INFO -- : reaped #<Process::Status: pid 12321 exit 0> worker=1
+I, [2017-01-03T19:21:43.500850 #2577]  INFO -- : master complete
+I, [2017-01-03T19:22:07.419524 #14617]  INFO -- : Refreshing Gem list
+I, [2017-01-03T19:22:20.422706 #14617]  INFO -- : unlinking existing socket=/var/sockets/unicorn.sock
+I, [2017-01-03T19:22:20.427775 #14617]  INFO -- : listening on addr=/var/sockets/unicorn.sock fd=8
+I, [2017-01-03T19:22:20.428125 #14617]  INFO -- : worker=0 spawning...
+I, [2017-01-03T19:22:20.442685 #14656]  INFO -- : worker=0 spawned pid=14656
+I, [2017-01-03T19:22:20.442963 #14656]  INFO -- : worker=0 ready
+I, [2017-01-03T19:22:20.444202 #14617]  INFO -- : worker=1 spawning...
+I, [2017-01-03T19:22:20.468107 #14617]  INFO -- : master process ready
+I, [2017-01-03T19:22:20.491313 #14660]  INFO -- : worker=1 spawned pid=14660
+I, [2017-01-03T19:22:20.491574 #14660]  INFO -- : worker=1 ready

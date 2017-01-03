@@ -18,7 +18,7 @@
 /db/schema.rb
 /public/uploads
 /public/images
-/shared/log
+/shared
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
