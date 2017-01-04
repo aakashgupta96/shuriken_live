@@ -23,7 +23,7 @@
 /log/*
 !/log/.keep
 !/log/update
-!log/stream
+!/log/stream
 /log/stream/*
 /log/update/*
 /tmp

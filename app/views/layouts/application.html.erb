@@ -8,7 +8,7 @@
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">  
     <meta name="description" content="A tool for posting customized FB Live videos for polling purpose.">
     <meta name="keywords" content="Fb,facebook,live,streaming,codingninjas,shuriken,shurikenlive">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
 <body>
 <% unless notice.nil? %>
@@ -48,26 +48,49 @@
 
 <%= yield %>
 
+<footer id="footer">
+  <div class="people">
+    <p>
+      DEVELOPED BY:
+    </p>
+    <ul>
+      <li>
+        <a href="https://in.linkedin.com/in/aakash-gupta-876883124">Aakash Gupta</a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/apoorva.smartgirl">Apoorva Sharma</a>
+      </li>
+    </ul>
+  </div>
 
-<footer id= "footer">
-      <ul class="people">
-            <p> DEVELOPED BY: </p>
-               <div><li><a href="https://www.facebook.com/cricket.gupta">Aakash Gupta</a></li></div>
-               <div><li><a href="https://www.facebook.com/apoorva.smartgirl">Apoorva Sharma</a></li></div>
-      </ul>
-            <br><br>
-      <ul class="people">
-            <p>GUIDED BY:</p>
-                <div><li><a href="https://in.linkedin.com/in/ankushsingla">Ankush Singla</a></li></div>
-                <div><li><a href="https://in.linkedin.com/in/tushar-tuteja-00350613">Tushar Tuteja</a></li></div>
-      </ul> 
+  <div class="people">
+    <p>
+      GUIDED BY:
+    </p>
+    <ul>
+      <li>
+        <a href="https://in.linkedin.com/in/ankushsingla">Ankush Singla</a>
+      </li>
+      <li>
+        <a href="https://in.linkedin.com/in/tushar-tuteja-00350613">Tushar Tuteja</a>
+      </li>
+    </ul>
+  </div>
 
-      <div class = "people">
-            <p> CONTACT US: </p>
-            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@codingninjas.in</div>
-            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>aakash.gupta96@yahoo.in</div>
-            <div><i class="fa fa-envelope-o" aria-hidden="true"></i>apoorva.11596@gmail.com</div>
-      </div> 
+  <div class="people">
+    <p>
+      CONTACT US:
+    </p>
+    <div>
+      <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:apoorva.11596@gmail.com">apoorva.11596@gmail.com</a>
+    </div>
+    <div>
+      <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:aakash@shurikenlive.com">aakash@shurikenlive.com</a>
+    </div>
+    <div>
+      <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:contact@codingninjas.in">contact@codingninjas.in </a>
+    </div>    
+  </div>
 </footer>
 
 <script>

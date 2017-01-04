@@ -356,7 +356,7 @@ main{
 .back_image
 {
 	background-image: image-url('home.jpg');
-	background-size: 100% 574px;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height:574px;
 	display: flex;
@@ -370,19 +370,39 @@ main{
 		justify-content: space-around;
 		align-items: center;
 		width: 40%;
-		margin: 2% 0% 2% 50%;
+    margin: 2% 0% 2% 50%;
 		background-color: black;
 		opacity: 0.7;
 		border-radius: 60px;
-		
+    @media screen and (max-width: 480px)
+    {
+      margin: 2% 0 2% 10%;
+      width: 80%;
+    }
 		p
 		{
-			margin: 30px 30px 30px 30px;
+      margin: 30px 30px 30px 30px;
 			font-weight: 200;
-			font-size: 34px;
-			line-height: 40px;
+			font-size: 32px;
+			line-height: 44px;
 			color: white;
 			text-align: center;
+      @media screen and (max-width: 1100px)
+      {
+        font-size: 26px; 
+        line-height: 38px; 
+      }
+      @media screen and (max-width: 900px)
+      {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 720px)
+      {
+        font-size: 20px; 
+        line-height: 28px; 
+      }
+      
 			a
 			{
 				text-decoration:none;
@@ -402,6 +422,7 @@ main{
 		justify-content: space-around;
 		align-items: center;
 		font-size: 48px;
+    line-height: 50px;
 		text-align:center;
 		font-family: "Futura";
 		color: hsl(0,0%,26%);
@@ -418,27 +439,52 @@ main{
 		display:flex;
     justify-content: space-around;
 		flex-wrap: wrap;
+    @media screen and (max-width: 1100px)
+    {
+      padding: 0 12% 0 12%;
+    }
+    @media screen and (max-width: 900px)
+    {
+      padding: 0 10% 0 10%;
+    } 
 	}
   .list_head
   {
     padding: 0px 18% 0px 18%;
     text-align:center;
-    line-height: 32px;
+    line-height: 30px;
     font-size:24px;
     color:hsl(0, 0%, 40%);
     margin-bottom:20px;
+    font-weight: 600;
+    @media screen and (max-width: 900px)
+    {
+      padding: 0 10% 0 10%;
+      font-size: 20px;
+    } 
   }
   .list
   {
-    padding: 0 20% 0 20%;
+    padding: 0 10% 0 10%;
     list-style: square;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
+    @media screen and (max-width: 900px)
+    {
+      flex-direction: column;
+    } 
+
     li
     {
       width: 44%;
       margin: 20px;
+      @media screen and (max-width: 900px)
+      {
+        width: 100%;  
+        margin: 10px;
+      } 
     }
   }
   .video_box
@@ -451,6 +497,11 @@ main{
     {
       width: 580px;
       height: 380px;
+
+      @media screen and (max-width: 480px)
+      {
+        height: 250px;
+      }
     }
   }
 
@@ -465,23 +516,53 @@ main{
     list-style: none;
     display: flex;
     justify-content: space-around;
+    @media screen and (max-width: 900px)
+    {
+      flex-direction: column;
+      padding: 0 4% 0 5%;
+    }
+    @media screen and (max-width: 900px)
+    {
+      padding: 0 2% 0 2%;
+    }
   }
   li
   {
     margin: 0 20px 0 20px;
-  }
-  .name
-  {
-    text-align: center;
-    padding: 15px 0 15px 0;
-    font-size: 27px;
-    font-weight: 600;
-  }
-  .description
-  {
-    padding: 15px 0 15px 0;
-    font-size: 16px;
-    text-align: center;
+    @media screen and (max-width: 900px)
+    {
+      display: flex;
+      margin-bottom: 35px;
+    }
+
+    .name
+    {
+      text-align: center;
+      font-size: 27px;
+      font-weight: 600;
+
+      @media screen and (max-width: 900px)
+      {
+        font-size: 23px;
+        text-align: left;
+        min-width: 150px;
+        padding-right: 20px;
+      }
+    }
+    .description
+    {
+      margin-top: 15px;
+      padding: 15px 0 15px 0;
+      font-size: 16px;
+      text-align: center;
+
+      @media screen and (max-width: 900px)
+      {
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+      }
+    }
   }
   
 }
@@ -507,29 +588,6 @@ main{
   font-size:16px;
   box-shadow: 1px 1px 1px #777;
 }
-
-.glass
-{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 100000;
-  background-color: black;
-  opacity: 0.4;
-  height: 1000px;
-  width: 100%;
-}
-.form
-{
-  position: absolute;
-  top: 300px;
-  left: 350px;
-  background-color: white; 
-  z-index: 100001;
-  border: 1px solid black;
-  padding: 10px;
-}
-
 
 @media screen and (max-width: 650px) {
   label {
