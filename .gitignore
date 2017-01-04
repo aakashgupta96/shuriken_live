@@ -16,10 +16,14 @@
 /config/local_env.yml
 /public/assets
 /db/schema.rb
-/public/uploads
-/public/images
-/shared
+/public/uploads/*
+/public/images/*
+/shared/*
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
+!/log/update
+!log/stream
+/log/stream/*
+/log/update/*
 /tmp
