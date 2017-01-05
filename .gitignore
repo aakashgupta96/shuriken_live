@@ -19,6 +19,7 @@
 /public/uploads/*
 /public/images/*
 /shared/*
+/config/unicorn.rb
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
