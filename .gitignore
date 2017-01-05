@@ -10,15 +10,12 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
-/config/local_env.yml
 /config/initializers/resque_auth.rb
 /config/local_env.yml
-/public/assets
-/db/schema.rb
+/public/assets/*
 /public/uploads/*
 /public/images/*
 /shared/*
-/config/unicorn.rb
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
