@@ -386,3 +386,67 @@ I, [2017-01-03T19:22:20.444202 #14617]  INFO -- : worker=1 spawning...
 I, [2017-01-03T19:22:20.468107 #14617]  INFO -- : master process ready
 I, [2017-01-03T19:22:20.491313 #14660]  INFO -- : worker=1 spawned pid=14660
 I, [2017-01-03T19:22:20.491574 #14660]  INFO -- : worker=1 ready
+I, [2017-01-05T09:40:01.580941 #9401]  INFO -- : Refreshing Gem list
+F, [2017-01-05T09:40:03.211883 #9401] FATAL -- : error adding listener addr=/var/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /var/sockets/unicorn.sock
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-05T09:43:25.269304 #9534]  INFO -- : Refreshing Gem list
+F, [2017-01-05T09:43:26.858091 #9534] FATAL -- : error adding listener addr=/home/ubuntu/shuriken_live/shared/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /home/ubuntu/shuriken_live/shared/sockets/unicorn.sock
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-05T09:46:15.529423 #9670]  INFO -- : Refreshing Gem list
+F, [2017-01-05T09:46:17.137279 #9670] FATAL -- : error adding listener addr=/home/ubuntu/shuriken_live/shared/sockets/unicorn.sock
+Errno::ENOENT: No such file or directory - connect(2) for /home/ubuntu/shuriken_live/shared/sockets/unicorn.sock
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:231:in `listen'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `each'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:130:in `start'
+  /home/ubuntu/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /home/ubuntu/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2017-01-05T09:47:29.649312 #9769]  INFO -- : Refreshing Gem list
+I, [2017-01-05T09:47:31.265474 #9769]  INFO -- : listening on addr=/home/ubuntu/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-05T09:47:31.265575 #9769]  INFO -- : worker=0 spawning...
+I, [2017-01-05T09:47:31.266623 #9769]  INFO -- : worker=1 spawning...
+I, [2017-01-05T09:47:31.267345 #9769]  INFO -- : master process ready
+I, [2017-01-05T09:47:31.272113 #9772]  INFO -- : worker=0 spawned pid=9772
+I, [2017-01-05T09:47:31.272235 #9772]  INFO -- : worker=0 ready
+I, [2017-01-05T09:47:31.272826 #9774]  INFO -- : worker=1 spawned pid=9774
+I, [2017-01-05T09:47:31.272934 #9774]  INFO -- : worker=1 ready
+I, [2017-01-05T10:04:59.876043 #9769]  INFO -- : reaped #<Process::Status: pid 9772 exit 0> worker=0
+I, [2017-01-05T10:04:59.876130 #9769]  INFO -- : reaped #<Process::Status: pid 9774 exit 0> worker=1
+I, [2017-01-05T10:04:59.876185 #9769]  INFO -- : master complete
+I, [2017-01-05T10:05:43.420449 #1236]  INFO -- : Refreshing Gem list
+I, [2017-01-05T10:05:46.510588 #1236]  INFO -- : unlinking existing socket=/home/ubuntu/shuriken_live/shared/sockets/unicorn.sock
+I, [2017-01-05T10:05:46.511170 #1236]  INFO -- : listening on addr=/home/ubuntu/shuriken_live/shared/sockets/unicorn.sock fd=8
+I, [2017-01-05T10:05:46.511251 #1236]  INFO -- : worker=0 spawning...
+I, [2017-01-05T10:05:46.512257 #1236]  INFO -- : worker=1 spawning...
+I, [2017-01-05T10:05:46.512983 #1236]  INFO -- : master process ready
+I, [2017-01-05T10:05:46.517741 #1375]  INFO -- : worker=0 spawned pid=1375
+I, [2017-01-05T10:05:46.517859 #1375]  INFO -- : worker=0 ready
+I, [2017-01-05T10:05:46.521412 #1377]  INFO -- : worker=1 spawned pid=1377
+I, [2017-01-05T10:05:46.521532 #1377]  INFO -- : worker=1 ready
