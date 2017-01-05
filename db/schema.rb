@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20161227090846) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "compare_objects", force: :cascade do |t|
     t.string   "name"
     t.string   "emoticon"
@@ -46,6 +49,6 @@ ActiveRecord::Schema.define(version: 20161227090846) do
     t.string   "uid"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
