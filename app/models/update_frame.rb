@@ -16,8 +16,10 @@ class UpdateFrame
     txt.font_weight = Magick::BoldWeight
      
     loop do 
-      
+    
     begin
+    
+      sleep(1)
       
       reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
       
