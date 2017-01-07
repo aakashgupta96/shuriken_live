@@ -21,7 +21,9 @@ class UpdateFrame
     
       sleep(1)
       
-      reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
+      reactions = @graph.get_object("#{post.video_id}/reactions?limit=10000000")
+
+      #reactions = @graph.get_object("#{post.video_id}",fields: "reactions")
       
       if post.comparisons == 2
         obj1 = UpdateFrame.retrieve(post.compare_objects[0].emoticon,reactions)
@@ -90,10 +92,10 @@ end
   def self.retrieve x,reactions
     count = 0;
     x = x.upcase
-    if(reactions.nil? or reactions["reactions"].nil? or reactions["reactions"]["data"].nil?)
-      return 0
-    end
-    reactions["reactions"]["data"].each do |i|
+    
+    return 0 if reactions.nil?
+     
+    reactions.each do |i|
       count = count + 1 if x == i["type"]
     end
     return count
