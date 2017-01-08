@@ -6,4 +6,4 @@ require 'carrierwave/orm/activerecord'
 require 'frame'
 Rails.application.initialize!
 
-#Resque.enqueue(StopStream)
+Resque.enqueue(StopStream)
