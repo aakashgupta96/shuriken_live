@@ -3,23 +3,21 @@ class EditorController < ApplicationController
 	include Magick
 
   def testFrame
-    post = Post.last
     
-    txt = Draw.new
-    txt.pointsize = 30
-    txt.stroke = "orange"
-    txt.fill = "black"
-    txt.font_weight = Magick::BoldWeight
-   
-    frame = ImageList.new("public/uploads/post/#{post.id}/frame.png")
-    frame.annotate(txt,0,0,130,200,"0")
-    frame.annotate(txt,0,0,360,200,"0")
-    frame.annotate(txt,0,0,580,200,"0")
-    frame.annotate(txt,0,0,130,380,"0")
-    frame.annotate(txt,0,0,360,380,"0")
-    frame.annotate(txt,0,0,580,380,"0")
-    frame.write("public/uploads/post/#{post.id}/frame2.png")
-    send_data frame.to_blob, :stream => "false", :filename => "test.png", :type => "image/png", :disposition => "inline"
+    img = Image.read("public/images/13_frame.png").first
+
+    # Create a new image in memory with transparent canvas
+    # size of this 'mark' image is same as original image which we want to watermark
+    draw = Draw.new
+    draw.annotate(img,0,0,190,0, "Made by: shurikenlive.codingninjas.in") do
+      draw.gravity = Magick::SouthGravity
+      draw.pointsize = 20
+      draw.fill = "orange" # set text color
+      draw.stroke = "white"
+      draw.stroke_width =0.5
+    end
+    
+    send_data img.to_blob, :stream => "false", :filename => "test.png", :type => "image/png", :disposition => "inline"
   end
 
 	def createFrame 

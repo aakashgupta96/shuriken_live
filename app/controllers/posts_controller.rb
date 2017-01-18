@@ -54,6 +54,7 @@ class PostsController < ApplicationController
     if workers_available? 
       Resque.enqueue(StartStream,@post.id)
       Resque.enqueue(UpdateFrame,@post.id)
+      Resque.enqueue(NotifyAdmins,@post.id)
     else
       redirect_to root_path, alert: "Sorry! Can't process you request"
       return
@@ -117,16 +118,10 @@ class PostsController < ApplicationController
       Resque::Worker.all.each do |worker|
         
         unless worker.working?
-          if worker.queues.first == "start_stream"
-            start = 1
-          elsif worker.queues.first == "update_frame"
-            update = 1
-          end
+          start = 1 if worker.queues.first == "start_stream"
+          update = 1 if worker.queues.first == "update_frame"
         end
-
-        if start==1 and update==1
-          return true
-        end
+        return true if start==1 and update==1
       end
       return false
     end

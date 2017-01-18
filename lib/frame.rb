@@ -254,6 +254,14 @@ module Frame
 
 	    end
 	    
+	    #adding watermark
+	    draw = Draw.new
+	    draw.gravity = Magick::SouthGravity
+      	draw.pointsize = 20
+        draw.fill = "orange" # set text color
+   		draw.stroke = "white"
+   	    draw.stroke_width =0.5
+    	draw.annotate(result,0,0,190,0, "Made by: shurikenlive.codingninjas.in")
 
 	    #For saving image
 	    result.write("public/uploads/post/#{post.id}/frame.png")
@@ -298,4 +306,5 @@ module Frame
 	    frame.write("public/images/#{post.id}_frame.png")
 	    #frame.write("app/assets/images/#{post.id}_frame.png")
  	end
+ 	
 end
