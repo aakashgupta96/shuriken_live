@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:publish,:create,:preview, :edit_title, :edit, :update, :video_id, :destroy]
   before_action :authenticate_user!, only: []
-  
+  skip_before_filter :set_mobile_format
+
   include Frame
 
   def home
@@ -23,28 +24,10 @@ class PostsController < ApplicationController
     @compare_object = CompareObject.new
   end
 
-  # GET /posts
-  # GET /posts.json
-  # def index
-  #   @posts = Post.new
-  # end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  # def show
-    
-  # end
-
-  # GET /posts/new
   def new
     @post = Post.new
   end
 
-  # GET /posts/1/edit
-  # def edit_objects
-  #   @compare_object = CompareObject.new
-  # end
-  
   def preview
     
   end
@@ -61,8 +44,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post.compare_objects.delete_all
     @post.comparisons.times do |i|
@@ -97,8 +78,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|
@@ -110,7 +89,6 @@ class PostsController < ApplicationController
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     
     def workers_available?
       start = 0
@@ -133,7 +111,6 @@ class PostsController < ApplicationController
       end
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
     end
