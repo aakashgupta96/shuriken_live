@@ -63,8 +63,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -112,7 +110,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:comparisons)
+      params.require(:post).permit(:key,:title,:duration,:start_time,:background,:audio,:comparisons)
     end
 
     def compare_object_params i

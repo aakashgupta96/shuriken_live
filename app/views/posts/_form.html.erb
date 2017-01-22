@@ -33,7 +33,12 @@
 
   <div class="field">
     <%= f.label :background_Image %>
-    <%= f.file_field :background, {required: 'true', class: 'file_select'}%>
+    <%= f.file_field :background, {required: 'true', class: 'file_select', onchange: "validateImageFiles(this);", data: { max_file_size: 5.megabytes} }%>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :playback_audio %>
+    <%= f.file_field :audio, {class: 'file_select', onchange: "validateAudioFiles(this);", data: { max_file_size: 5.megabytes} }%>
   </div><br>
 
   <div class="field">
