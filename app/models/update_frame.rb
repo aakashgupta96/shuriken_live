@@ -6,6 +6,17 @@ class UpdateFrame
 
   def self.perform(post_id)
 
+
+    pid = Process.fork do
+      UpdateFrame.work post_id  
+    end
+
+    #puts "parent, pid #{Process.pid}, waiting on child pid #{pid}"
+    Process.wait
+  end
+
+  def self.work post_id
+    
     Resque.logger = Logger.new(Rails.root.join("log").join("update").join(post_id.to_s).to_s)
     post = Post.find(post_id)
     @graph = Koala::Facebook::API.new(ENV["FB_ACCESS_TOKEN"])
@@ -84,10 +95,11 @@ class UpdateFrame
       rescue Exception => e
         Resque.logger.info "Error message is #{e.message}"
         Resque.logger.info "Error class is #{e.class}"
-	      retry
+        retry
      end
   end
-end
+
+  end
 
   def self.retrieve x,reactions
     count = 0;

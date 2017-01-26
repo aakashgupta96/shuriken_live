@@ -22,9 +22,9 @@ class StopStream
 					post_id = StopStream.retrieve_post_id(worker)
 					p = Post.find(post_id)
 					duration = (p.duration-30.years).to_i + 50
-					puts "Duration is ",duration," and elapsed_time is ",elapsed_time
+					#puts "Duration is ",duration," and elapsed_time is ",elapsed_time
 					if(elapsed_time >= duration)
-						%x[kill #{x}]	
+						%x[kill -9 #{x}]	
 					end
 				end
 			end

@@ -4,20 +4,70 @@ class EditorController < ApplicationController
 
   def testFrame
     
-    img = Image.read("public/images/13_frame.png").first
+    post = Post.last
+      
+      background = ImageList.new("public/uploads/post/#{post.id}/frame.png")
+       result = background
+       result.resize!(720,405)
+      object = ImageList.new("public/watermark.png")
+      #object = object.resize_to_fill(200,200)
+      result = result.composite(object,370,380, Magick::OverCompositeOp)
+      
+      
 
-    # Create a new image in memory with transparent canvas
-    # size of this 'mark' image is same as original image which we want to watermark
-    draw = Draw.new
-    draw.annotate(img,0,0,190,0, "Made by: shurikenlive.codingninjas.in") do
-      draw.gravity = Magick::SouthGravity
-      draw.pointsize = 20
-      draw.fill = "orange" # set text color
-      draw.stroke = "white"
-      draw.stroke_width =0.5
-    end
-    
-    send_data img.to_blob, :stream => "false", :filename => "test.png", :type => "image/png", :disposition => "inline"
+
+      # #Resizing gif image
+      #   file = File.new("public/#{post.compare_objects[0].emoticon}.gif")
+      #   list = Magick::ImageList.new.from_blob file.read
+      #   list = list.coalesce.remap
+      #   list.each do |x|
+      #     x.resize_to_fill!(50,50)
+      #   end
+      
+
+
+
+      #list.resize_to_fill!(50,50)
+      # Adding title to background
+      # title = Draw.new
+      # title.gravity = Magick::NorthGravity
+      # title.pointsize = 38
+      # title.stroke = "black"
+      # title.fill = "white"
+      # title.font_weight = Magick::BoldWeight
+
+      # txt = Draw.new
+      # txt.pointsize = 30
+      # txt.stroke = "black"
+      # txt.fill = "white"
+      # txt.font_weight = Magick::BoldWeight
+      
+      # result = result.composite(list,110,290, Magick::OverCompositeOp)
+       # if post.compare_objects.count == 2
+        
+       #   result.annotate(title, 0,0,0,25, post.title)
+
+      #   object = ImageList.new("public/uploads/post/#{post.id}/objects/large_1.png")
+      #   object = object.resize_to_fill(200,200)
+      #   result = background.composite(object,100,80, Magick::OverCompositeOp)
+        
+      #   object = ImageList.new("public/uploads/post/#{post.id}/objects/large_2.png")
+      #   object = object.resize_to_fill(200,200)
+      #   result = result.composite(object,400,80, Magick::OverCompositeOp)
+        
+      #   object = ImageList.new("public/#{post.compare_objects[0].emoticon}.gif")
+      #   object = object.resize_to_fill(50,50)
+      #   result = result.composite(object,110,290, Magick::OverCompositeOp)
+        
+      #   object = ImageList.new("public/#{post.compare_objects[1].emoticon}.gif")
+      #   object = object.resize_to_fill(50,50)
+      #   result = result.composite(object,410,290, Magick::OverCompositeOp)
+        
+      #   result.annotate(txt, 0,0,120,370,post.compare_objects[0].name)
+      #   result.annotate(txt, 0,0,420,370,post.compare_objects[1].name)
+      # end
+    #byebug
+    send_data result.to_blob, :stream => "false", :filename => "test.gif", :type => "image/gif", :disposition => "inline"
   end
 
 	def createFrame 
