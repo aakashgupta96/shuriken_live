@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   def objects
     @post = Post.new(post_params)
     begin
-      x = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
+      x = params[:post][:video_id].split("%2F")[5]
+      #x = params[:post][:video_id].split("?").last.split("=").second.split("\"").first
     rescue
       redirect_to new_post_path, alert: "Invalid video embed link"
       return
