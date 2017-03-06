@@ -67,7 +67,7 @@
 		map = { "0":"like", "1":"love", "2":"haha" , "3":"wow", "4":"sad" , "5":"angry" }
 		for(var j = 5;j<y.length;j++)
 		{
-			console.log(y[j].value)
+			//console.log(y[j].value)
 			if(y[j].checked)
 			{
 				count[y[j].value]++;
@@ -76,8 +76,8 @@
 		size = Object.keys(count).length
 		for(j=0;j<size;j++)
 		{
-			console.log(map[j])
-			console.log(count[map[j]])	
+			//console.log(map[j])
+			//console.log(count[map[j]])	
 			if(count[map[j]] > 0)
 			{
 				temp = "input[value="+map[j]+"]"
