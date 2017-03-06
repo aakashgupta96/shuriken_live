@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag 'application', media: 'all'%>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">  
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">  
     <meta name="description" content="A tool for posting customized FB Live videos for polling purpose.">
     <meta name="keywords" content="Fb,facebook,live,streaming,codingninjas,shuriken,shurikenlive">
 
@@ -98,6 +98,7 @@
 
 <script>
   window.fbAsyncInit = function() {
+    FB._https = true;
     FB.init({
       appId      : '1915319298687933',
       xfbml      : true,
